@@ -118,7 +118,7 @@ export const SERVICES: Service[] = [
   {
     title: 'AI Chatbot Solutions',
     description: 'Intelligent AI chatbots customized for business workflows including customer service, internal support, and automated interactions. Integrates with messaging platforms, websites, and enterprise systems.',
-    image: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80',
     features: ['Workflow Automation', 'Internal Support', '24/7 Service', 'Multi-platform Integration', 'Deep Learning', 'Natural Language Processing']
   },
   {
