@@ -2,8 +2,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
-import { MemoryStick as Memory, Cpu, Network, Shield, Database, RefreshCcw, ShoppingCart, Cloud, Terminal, Search, Grid, List, Download, X } from 'lucide-react';
+import { MemoryStick as Memory, Cpu, Network, Shield, Database, RefreshCcw, ShoppingCart, Cloud, Terminal, Search, Grid, List, Download, X, ArrowRight } from 'lucide-react';
 import * as Icons from 'lucide-react';
+import ProductModal from '../components/ProductModal';
+import { Product } from '../types';
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState<string>('All');
@@ -11,8 +13,15 @@ export default function Products() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [cartCount, setCartCount] = useState(0);
   const [showCartToast, setShowCartToast] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const categories = ['All', 'Hardware', 'Software', 'Hybrid'];
+  const handleOpenModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const categories = ['All', 'Security', 'Enterprise', 'Financial'];
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(product => {
@@ -69,12 +78,12 @@ export default function Products() {
         <nav className="flex text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">
           <Link to="/" className="hover:text-[#3b82f6] transition-colors">Console</Link>
           <span className="mx-3 text-slate-700">/</span>
-          <span className="text-slate-300">Enterprise Infrastructure</span>
+          <span className="text-slate-300">Intelligent Systems</span>
         </nav>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold tracking-tighter text-white mb-4">Product Catalog</h1>
-            <p className="text-lg text-slate-400 leading-relaxed">Precision-engineered hardware and intelligent software solutions designed to power the next generation of enterprise scale.</p>
+            <h1 className="text-5xl font-bold tracking-tighter text-white mb-4">Intelligent Systems & Infrastructure Solutions</h1>
+            <p className="text-lg text-slate-400 leading-relaxed">Cahaya Xcel provides robust technology products designed to enhance security, efficiency, and operational control across organizations.</p>
           </div>
           <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1f2937] border border-white/10 rounded-xl text-sm font-bold text-white hover:bg-slate-800 transition-all">
             <Download size={20} />
@@ -114,14 +123,14 @@ export default function Products() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={`w-full flex items-center justify-between px-4 py-3 rounded-xl font-bold transition-all ${activeCategory === cat
-                        ? 'bg-[#135bec] text-white shadow-lg shadow-[#135bec]/20'
-                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                      ? 'bg-[#135bec] text-white shadow-lg shadow-[#135bec]/20'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
                       }`}
                   >
                     <span className="flex items-center gap-3">
-                      {cat === 'Hardware' && <Memory size={20} />}
-                      {cat === 'Software' && <Terminal size={20} />}
-                      {cat === 'Hybrid' && <Cloud size={20} />}
+                      {cat === 'Security' && <Shield size={20} />}
+                      {cat === 'Enterprise' && <Icons.Layers size={20} />}
+                      {cat === 'Financial' && <Icons.CreditCard size={20} />}
                       {cat === 'All' && <Grid size={20} />}
                       {cat}
                     </span>
@@ -139,10 +148,10 @@ export default function Products() {
                 <div>
                   <label className="text-sm font-bold text-slate-300 mb-4 block">Performance Tier</label>
                   <div className="space-y-3">
-                    {['Ultra High Core', 'Edge Specialized', 'Efficiency Optimized'].map((tier) => (
+                    {['Enterprise'].map((tier) => (
                       <label key={tier} className="flex items-center gap-3 cursor-pointer group">
-                        <input type="checkbox" className="rounded-md border-white/10 bg-white/5 text-[#135bec] focus:ring-[#135bec] focus:ring-offset-[#0a0f1a]" />
-                        <span className="text-sm text-slate-400 group-hover:text-white transition-colors">{tier}</span>
+                        <input type="checkbox" defaultChecked className="rounded-md border-white/10 bg-white/5 text-[#135bec] focus:ring-[#135bec] focus:ring-offset-[#0a0f1a]" />
+                        <span className="text-sm text-slate-400 group-hover:text-white transition-colors">{tier} Tier Assets</span>
                       </label>
                     ))}
                   </div>
@@ -206,9 +215,9 @@ export default function Products() {
                       style={{ backgroundImage: `url('${product.image}')` }}
                     ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1f2937] to-transparent"></div>
-                    {product.id === 'nexus-core-x1000' && (
+                    {product.id === 'cctv-surveillance' && (
                       <div className="absolute top-4 left-4">
-                        <span className="bg-[#135bec] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg">New Arrival</span>
+                        <span className="bg-[#135bec] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg">Featured Tech</span>
                       </div>
                     )}
                   </div>
@@ -236,14 +245,30 @@ export default function Products() {
                         <span className="text-[10px] text-slate-500 block font-black uppercase tracking-wider">
                           {product.price?.includes('/mo') ? 'Subscription' : 'Unit Price'}
                         </span>
-                        <span className="text-2xl font-bold text-white">{product.price}</span>
+                        <div className="flex items-center gap-4">
+                          <span className="text-2xl font-bold text-white">{product.price}</span>
+                          <button
+                            onClick={() => handleOpenModal(product)}
+                            className="text-xs font-black text-[#135bec] uppercase tracking-widest hover:underline"
+                          >
+                            Details
+                          </button>
+                        </div>
                       </div>
-                      <button
-                        onClick={() => handleAddToCart(product.title)}
-                        className="bg-[#135bec] text-white p-3 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-[#135bec]/20"
-                      >
-                        <ShoppingCart size={20} />
-                      </button>
+                      <div className="flex gap-3">
+                        <button
+                          onClick={() => handleAddToCart(product.title)}
+                          className="bg-slate-800 text-white p-3 rounded-xl hover:bg-slate-700 transition-all border border-white/5"
+                        >
+                          <ShoppingCart size={20} />
+                        </button>
+                        <button
+                          onClick={() => handleOpenModal(product)}
+                          className="bg-[#135bec] text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-[#135bec]/20 font-bold flex items-center gap-2"
+                        >
+                          View <ArrowRight size={16} />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -272,6 +297,12 @@ export default function Products() {
           </div>
         </div>
       </div>
+
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </main>
   );
 }

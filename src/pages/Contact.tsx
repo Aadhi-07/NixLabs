@@ -9,6 +9,7 @@ import {
   MessageSquare,
   Clock,
   ShieldCheck,
+  ArrowRight,
 } from "lucide-react";
 
 export default function Contact() {
@@ -22,7 +23,7 @@ export default function Contact() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      await fetch("https://formsubmit.co/aadhithiyajayaraman@gmail.com", {
+      await fetch("https://formsubmit.co/cahayaxcel@gmail.com", {
         method: "POST",
         body: formData,
       });
@@ -63,7 +64,7 @@ export default function Contact() {
                     Email Us
                   </h4>
                   <p className="text-lg font-bold text-white">
-                    aadhithiyajayaraman@gmail.com
+                    cahayaxcel@gmail.com
                   </p>
                 </div>
               </div>
@@ -77,7 +78,7 @@ export default function Contact() {
                     Call Support
                   </h4>
                   <p className="text-lg font-bold text-white">
-                    +91 8838632531
+                    +1 (555) 123-4567
                   </p>
                 </div>
               </div>
@@ -91,35 +92,42 @@ export default function Contact() {
                     Headquarters
                   </h4>
                   <p className="text-lg font-bold text-white">
-                    Nixfusion Tower, OMR, <br />
-                    Chennai, Tamil Nadu 600096
+                    100 Innovation Drive, <br />
+                    San Francisco, CA 94105
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="mt-16 pt-16 border-t border-slate-800">
-              <h4 className="text-sm font-black text-white uppercase tracking-widest mb-6">
-                Global Presence
+              <h4 className="text-sm font-black text-white uppercase tracking-widest mb-8">
+                San Francisco Headquarters
               </h4>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "Chennai, TN",
-                  "Austin, TX",
-                  "Zurich, CH",
-                  "Singapore, SG",
-                  "London, UK",
-                  "Tokyo, JP",
-                ].map((city) => (
-                  <div
-                    key={city}
-                    className="flex items-center gap-2 text-slate-400 text-sm font-medium"
-                  >
-                    <Globe size={14} className="text-[#135bec]" />
-                    {city}
+              <div className="aspect-video rounded-3xl overflow-hidden border border-slate-800 relative group shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+                  alt="Cahaya Xcel SF Office"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-transparent to-transparent opacity-60"></div>
+                <div className="absolute bottom-4 left-4 right-4 bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                  <p className="text-white text-xs font-bold">100 Innovation Drive, CA 94105</p>
+                  <p className="text-slate-500 text-[10px] uppercase font-black mt-1 tracking-widest">Main Operations Hub</p>
+                </div>
+              </div>
+
+              <div className="mt-8 bg-slate-900 border border-slate-800 rounded-3xl p-6 flex items-center justify-between group hover:border-[#135bec] transition-all cursor-pointer">
+                <div className="flex items-center gap-4">
+                  <div className="size-12 bg-[#135bec]/10 rounded-xl flex items-center justify-center text-[#135bec]">
+                    <MapPin size={24} />
                   </div>
-                ))}
+                  <div>
+                    <h5 className="text-white font-bold text-sm">Interactive Map</h5>
+                    <p className="text-slate-500 text-xs">Open in Google Maps</p>
+                  </div>
+                </div>
+                <ArrowRight className="text-slate-500 group-hover:text-white group-hover:translate-x-2 transition-all" size={20} />
               </div>
             </div>
           </div>
@@ -207,10 +215,10 @@ export default function Contact() {
                           name="solution"
                           className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
                         >
-                          <option>IoT Gateway Pro</option>
-                          <option>Integration Suite</option>
-                          <option>Edge Controller</option>
-                          <option>Custom Engineering</option>
+                          <option>CCTV & Surveillance</option>
+                          <option>Visitor Management (VMS)</option>
+                          <option>Payment Gateways</option>
+                          <option>Platform Integration</option>
                         </select>
                       </div>
                     </div>
@@ -233,7 +241,7 @@ export default function Contact() {
                     <input
                       type="hidden"
                       name="_subject"
-                      value="New Project Inquiry - Nixfusion"
+                      value="New Project Inquiry - Cahaya Xcel"
                     />
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-4">

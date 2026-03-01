@@ -12,17 +12,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-2 group">
             <Network className="text-[#3b82f6] size-8 group-hover:rotate-12 transition-transform" />
-            <span className="text-2xl font-black tracking-tight text-white">Nixfusion Labs</span>
+            <span className="text-2xl font-black tracking-tight text-white">Cahaya Xcel</span>
           </Link>
-          
+
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-semibold transition-colors ${
-                  location.pathname === item.href ? 'text-[#3b82f6]' : 'text-slate-400 hover:text-white'
-                }`}
+                className={`text-sm font-semibold transition-colors ${location.pathname === item.href ? 'text-[#3b82f6]' : 'text-slate-400 hover:text-white'
+                  }`}
               >
                 {item.label}
               </Link>

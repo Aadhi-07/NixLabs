@@ -17,26 +17,38 @@ export default function About() {
               animate={{ opacity: 1 }}
               className="inline-block py-1.5 px-4 rounded-full bg-[#135bec]/20 text-[#135bec] text-xs font-black uppercase tracking-widest mb-8"
             >
-              Our Vision
+              About Us
             </motion.span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-10 leading-tight tracking-tight">
-              Architecting the <br /><span className="text-[#135bec]">Future of Integration</span>
+              Pioneering the future of <span className="text-[#135bec]">hardware-software integration</span> since 2015
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 leading-relaxed mb-12">
-              Founded in 2024 in Tamil Nadu, India, Nixfusion Labs was born from a simple realization: the world's most critical industries are held back by fragmented technology. We exist to bridge that gap.
-            </p>
+            <div className="space-y-6 mb-12">
+              <p className="text-xl md:text-2xl text-slate-400 leading-relaxed font-bold text-white">
+                Our Mission
+              </p>
+              <p className="text-xl md:text-2xl text-slate-400 leading-relaxed">
+                At TechIntegrate Solutions, we believe that the future lies at the intersection of hardware and software. Our mission is to bridge these two worlds, creating seamless integration solutions that empower businesses to innovate faster and operate smarter.
+              </p>
+              <p className="text-xl md:text-2xl text-slate-400 leading-relaxed">
+                Founded by a team of engineers passionate about embedded systems and cloud technologies, we've grown from a small consultancy to a leading provider of integration solutions serving clients across manufacturing, healthcare, and smart infrastructure.
+              </p>
+            </div>
             <div className="flex justify-center gap-12 pt-10 border-t border-slate-800">
               <div className="text-center">
-                <div className="text-4xl font-black text-white mb-2">2024</div>
+                <div className="text-4xl font-black text-white mb-2">2015</div>
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Founded</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-black text-white mb-2">500+</div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Clients</div>
+                <div className="text-4xl font-black text-white mb-2">150+</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Engineers</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-black text-white mb-2">12</div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Global Offices</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Countries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-black text-white mb-2">500+</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Projects</div>
               </div>
             </div>
           </div>
@@ -46,11 +58,14 @@ export default function About() {
       {/* Core Values */}
       <section className="py-32 bg-[#0B0F17]">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-black text-white mb-4">Our Values</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { icon: Target, title: 'Precision Engineering', desc: 'We don\'t believe in "good enough." Every line of code and every hardware component is engineered for absolute reliability.' },
-              { icon: Shield, title: 'Security First', desc: 'In an interconnected world, security isn\'t a feature—it\'s the foundation. We build with zero-trust principles at every layer.' },
-              { icon: Zap, title: 'Extreme Performance', desc: 'Latency is the enemy of progress. Our solutions are optimized for sub-millisecond response times in critical environments.' }
+              { icon: Target, title: 'Excellence', desc: 'We hold ourselves to the highest standards in engineering quality and customer service.' },
+              { icon: Zap, title: 'Innovation', desc: 'We constantly push boundaries to deliver cutting-edge solutions for complex challenges.' },
+              { icon: Layers, title: 'Partnership', desc: 'We work alongside our clients as true partners, invested in their long-term success.' }
             ].map((value) => (
               <div key={value.title} className="group p-10 bg-[#161c2d] rounded-3xl border border-slate-800/50 hover:border-[#135bec]/50 transition-all">
                 <div className="size-16 bg-[#135bec]/10 rounded-2xl flex items-center justify-center text-[#135bec] mb-8 group-hover:scale-110 transition-transform">
@@ -107,8 +122,8 @@ export default function About() {
           <div className="flex flex-col md:flex-row gap-20">
             <div className="w-full md:w-1/3">
               <h2 className="text-4xl font-black text-white mb-6">Our Journey</h2>
-              <p className="text-slate-400 leading-relaxed mb-8">From a small lab in Tamil Nadu, India to a global leader in enterprise integration. We've stayed true to our core mission every step of the way.</p>
-              <button 
+              <p className="text-slate-400 leading-relaxed mb-8">With deep expertise in surveillance systems, enterprise platforms, and integration architecture, we help organizations eliminate silos and achieve full visibility and control across their operations.</p>
+              <button
                 onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-[#135bec] font-bold flex items-center gap-2 group"
               >
@@ -118,9 +133,9 @@ export default function About() {
             <div id="timeline" className="w-full md:w-2/3 space-y-12 relative">
               <div className="absolute left-0 top-0 w-px h-full bg-slate-800 ml-4"></div>
               {[
-                { year: '2024', title: 'The Genesis', desc: 'Nixfusion Labs founded in Tamil Nadu, India with a focus on industrial IoT protocols.' },
-                { year: '2025', title: 'Series A & Expansion', desc: 'Raised $25M and opened our first North American headquarters in Austin.' },
-                { year: '2026', title: 'Global Leadership', desc: 'Surpassed 500 enterprise clients and launched the Edge Controller X-Series.' }
+                { year: '2024', title: 'The Genesis', desc: 'Cahaya Xcel founded with a focus on intelligent platforms and software integration.' },
+                { year: '2025', title: 'Global REACH', desc: 'Expanding our presence in government sectors and large-scale manufacturing across regions.' },
+                { year: '2026', title: 'Intelligent Ecosystems', desc: 'Launching unified security and operational platforms for healthcare and corporate offices.' }
               ].map((milestone) => (
                 <div key={milestone.year} className="relative pl-12">
                   <div className="absolute left-0 top-1.5 size-8 bg-[#135bec] rounded-full border-4 border-[#0B0F17] -ml-0.5"></div>

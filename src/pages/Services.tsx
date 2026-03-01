@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
-import { CheckCircle2, ArrowRight, Search, Layout, Code, Rocket, TrendingUp } from 'lucide-react';
+import IntegrationDiagram from '../components/IntegrationDiagram';
+import { CheckCircle2, ArrowRight, Search, Layout, Code, Rocket, TrendingUp, Shield, Zap, Cpu, Globe, Network } from 'lucide-react';
 
 export default function Services() {
   return (
@@ -16,14 +17,14 @@ export default function Services() {
           >
             <span className="inline-block py-1 px-3 rounded-full bg-[#135bec]/20 text-[#135bec] text-xs font-bold uppercase tracking-wider mb-6">Expertise & Innovation</span>
             <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-8">
-              Future-Proofing <br /><span className="text-[#135bec]">Enterprise Infrastructure</span>
+              Digital Solutions & <br /><span className="text-[#135bec]">Integration Expertise</span>
             </h1>
             <p className="text-xl text-slate-400 leading-relaxed mb-10">
-              We deliver high-performance technology services tailored for global enterprises. From hardware engineering to cloud-native integration, we bridge the gap between legacy systems and tomorrow's innovations.
+              Cahaya Xcel delivers specialized IT services that enable organizations to digitize, automate, and integrate their operations efficiently.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/products" className="bg-[#135bec] text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-[#135bec]/30 transition-all">Explore Capabilities</Link>
-              <button 
+              <button
                 onClick={() => document.getElementById('how-we-work')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2 text-white"
               >
@@ -34,6 +35,17 @@ export default function Services() {
         </div>
         <div className="absolute top-0 right-0 w-2/3 h-full hidden lg:block opacity-40">
           <div className="w-full h-full bg-[radial-gradient(circle_at_top_right,#135bec33,transparent,transparent)]"></div>
+        </div>
+      </section>
+
+      {/* Integration Diagram */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-white mb-4">Unified Ecosystem</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto font-medium">Cahaya Xcel Hub acts as the central intelligence layer, seamlessly bridging hardware and software units.</p>
+          </div>
+          <IntegrationDiagram />
         </div>
       </section>
 
@@ -120,7 +132,7 @@ export default function Services() {
             </div>
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Ready to integrate your future?</h2>
-              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">Join 500+ enterprises that trust Nixfusion Labs for their mission-critical infrastructure.</p>
+              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">Join organizations worldwide that trust Cahaya Xcel for their unified intelligent platforms.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/contact" className="bg-white text-[#135bec] px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl shadow-black/20">Get Started Today</Link>
                 <Link to="/contact" className="bg-transparent border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">Schedule a Demo</Link>

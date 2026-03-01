@@ -18,7 +18,7 @@ export default function Resources() {
     }, 10);
   };
 
-  const categories = ['All', 'FinTech', 'Manufacturing', 'HealthTech', 'Logistics'];
+  const categories = ['All', 'Corporate', 'Manufacturing', 'Healthcare', 'Education', 'Government'];
 
   const filteredStudies = useMemo(() => {
     return CASE_STUDIES.filter(study => {
@@ -58,9 +58,30 @@ export default function Resources() {
       </AnimatePresence>
 
       {/* Header */}
-      <div className="mb-20 text-center max-w-3xl mx-auto">
-        <h1 className="text-5xl font-black text-white mb-6 tracking-tight">Resources Hub</h1>
-        <p className="text-xl text-slate-400 leading-relaxed">Deep dives, technical documentation, and success stories from the front lines of enterprise integration.</p>
+      <div className="mb-24 text-center max-w-4xl mx-auto">
+        <h1 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tight">Insights, Knowledge & Support</h1>
+        <p className="text-xl text-slate-400 leading-relaxed mb-12">
+          Explore our resources to learn more about intelligent systems, integration strategies, and digital transformation.
+        </p>
+
+        <div className="inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 text-left bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-sm mb-12 w-full max-w-fit mx-auto">
+          {[
+            'Case Studies',
+            'Technical Articles',
+            'Product Guides',
+            'Integration Architecture',
+            'Support & Documentation'
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3 text-slate-300 font-bold group">
+              <div className="size-2 bg-[#135bec] rounded-full group-hover:scale-150 transition-transform"></div>
+              {item}
+            </div>
+          ))}
+        </div>
+
+        <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed italic">
+          We share practical insights to help organizations plan, deploy, and optimize technology solutions effectively.
+        </p>
       </div>
 
       {/* Featured Whitepaper */}
@@ -109,7 +130,7 @@ export default function Resources() {
                   <div className="h-1 w-full bg-slate-100 rounded-full"></div>
                 </div>
                 <div className="flex justify-between items-end">
-                  <div className="text-[10px] font-black text-[#135bec] uppercase">Nixfusion Labs</div>
+                  <div className="text-[10px] font-black text-[#135bec] uppercase">Cahaya Xcel</div>
                   <div className="size-10 bg-slate-50 rounded-full flex items-center justify-center text-[#135bec]">
                     <BookOpen size={20} />
                   </div>
@@ -145,8 +166,8 @@ export default function Resources() {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${activeCategory === cat
-                      ? 'bg-[#135bec] text-white shadow-lg'
-                      : 'text-slate-400 hover:text-white'
+                    ? 'bg-[#135bec] text-white shadow-lg'
+                    : 'text-slate-400 hover:text-white'
                     }`}
                 >
                   {cat}
@@ -231,7 +252,7 @@ export default function Resources() {
             <FileText size={32} />
           </div>
           <h3 className="text-2xl font-bold text-white mb-4">API Documentation</h3>
-          <p className="text-slate-400 mb-8 leading-relaxed">Everything you need to integrate Nixfusion Labs into your existing workflow. Comprehensive guides for REST, GraphQL, and WebSocket APIs.</p>
+          <p className="text-slate-400 mb-8 leading-relaxed">Everything you need to integrate Cahaya Xcel into your existing workflow. Comprehensive guides for our unified ecosystem APIs.</p>
           <button
             onClick={() => showToast('Redirecting to Documentation Portal...')}
             className="text-[#135bec] font-bold flex items-center gap-2 hover:gap-4 transition-all cursor-pointer"

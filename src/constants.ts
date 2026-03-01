@@ -13,150 +13,119 @@ export const STATS: Stat[] = [
   { label: 'Global Projects', value: '500+' },
   { label: 'Expert Engineers', value: '150+' },
   { label: 'SLA Uptime', value: '99.9%' },
+  { label: 'Secure Endpoints', value: '10k+' },
+  { label: 'System Integrations', value: '1.2k' },
   { label: 'Pro Support', value: '24/7' },
 ];
 
 export const FEATURED_SOLUTIONS: Solution[] = [
   {
-    id: 'iot-gateway-pro',
-    title: 'IoT Gateway Pro',
-    category: 'Hardware',
-    description: 'Secure, high-performance connectivity for industrial assets with built-in encryption and legacy protocol support.',
-    price: '$499',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9tRqYmxf9yS6uZGbq5EYGBVJv6QiIQWxxdz6bGSVv_75Q4382qul9Fjk2kJeogofb_kV-IeKgEV3dUn-ia5XApkqXoMkPItVLW0cyD3SLZiHCFXLPB5CTrMtAjvvjGHSj044Sgt7Wab36EA4pIwEtnGtpSRcppL1uuT645gxnyRYxSLxrm9jgDfavsqaWPfp0kloeXxlzU30Amw4bSYSk4dRelm_M9lznBgdhnQ2rXOF4pkq9U-QnT9Db14dKDl5g1E8OHtE-',
-    cta: 'Learn More'
-  },
-  {
-    id: 'integration-suite',
-    title: 'Integration Suite',
-    category: 'Software',
-    description: 'A unified software layer designed to harmonize enterprise data across multiple platforms and legacy systems.',
+    id: 'enterprise-management',
+    title: 'Enterprise Management Platforms',
+    category: 'Enterprise',
+    description: 'Unified operational platforms including VMS, TAMS, and PMS to streamline identity, access, and personnel workflows.',
     price: 'Custom',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBI3i65F1Y9RTIs_461SvNxJuSWd5SAse_E2F4_b4EvEYg2JUYGc6-4sBfYlVL7aOvrl__RGidvqsTKawzmbEhh-0jm14U2JwHOYIiIW00m6HaO2C_BRcEqoE4OOy5gMW1NENif5KOFVhUz-pFgdx6YJN3ROS1TYYGOoHv8uZkhFbBvUyieb0MgzyUy06Iy5X_NTuwP8cppLx0mlqW1Yr5Qk8Q3fChh1gsvDS0CNTzdwzleF3uuNjVoz-GhXpjQFefPIyxqqkGl',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80',
     cta: 'Request Demo'
   },
   {
-    id: 'edge-controller',
-    title: 'Edge Controller',
-    category: 'Hybrid',
-    description: 'Low-latency processing at the edge for real-time decision making in critical infrastructure environments.',
-    price: 'Consult',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-0quMosn_5JuTZCyvqG3fWjT-F_YAunym1iBxam5Wrvh-2ylTfRW31AVHO-I_LagIlb0bWUyLQRvBsDplrCSTn7hH866rmen8SeP9JKnMjxkEpAG96q7kFd-ssGsC2fpqKbViBxWuvPvsHJYxo-M_54Jt4cc_VPKPeieSBkLX9JaqfBiGoSvhUg1m98_RdM53MXgja_ZicK_HhY8rjhVuN18xQd6GtRTacQ-3AkPLeKeYKGOGGsCfioSbAxoUEtR37ecS3VSD',
-    cta: 'Speak to Expert'
+    id: 'ai-automation',
+    title: 'AI-Powered Business Automation',
+    category: 'Software',
+    description: 'Intelligent AI chatbots and automated workflows designed to enhance internal support and customer service efficiency.',
+    price: 'Custom',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
+    cta: 'Explore AI'
+  },
+  {
+    id: 'payment-gateway',
+    title: 'Secure Payment & Digital Solutions',
+    category: 'Financial',
+    description: 'Scalable payment integration for kiosks and web platforms, designed for reliability, compliance, and seamless UX.',
+    price: 'Custom',
+    image: 'https://images.unsplash.com/photo-1556742049-36efd7a04977?auto=format&fit=crop&q=80',
+    cta: 'View Guide'
   }
 ];
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'nexus-core-x1000',
-    title: 'Nexus Core X-1000',
-    category: 'Hardware',
-    performanceTier: 'Ultra High Core',
+    id: 'cctv-surveillance',
+    title: 'CCTV & Surveillance Systems',
+    category: 'Security',
+    performanceTier: 'Enterprise',
     availability: 'Instant',
-    description: 'Enterprise-grade 128-core processing unit designed for high-density compute environments.',
-    price: '$4,299.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDUI6qfuPCoyTnZaFiLM-BRz9YvpacG93tsfoSj4riJJb3y4-t0cNYBp4t5XcPCfGy_SmNFTGn-V4NC3SelLV9N95Dlur2Wi6H_GhWwDfgXtKsM0K61B8VQpjopdC913FiTErpjNBCc8_DyP6VfQcp_6iXubmk0QZRmB0gTZ28TziejAV-WYqDbH3qmSnmELVj_bRt8iuw_gIMnZ-RhIlo7XIsEOtS475yQkWaGzbWVGdiBHypIMbK6jXosC2Ff1yQulCm33b9h',
-    cta: 'Add to Cart',
+    description: 'End-to-end surveillance solutions including installation, configuration, troubleshooting, and preventive maintenance. Our systems deliver high-definition monitoring, remote access, analytics, and secure storage for complete situational awareness.',
+    price: 'Custom',
+    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80',
+    cta: 'Learn More',
     specs: [
-      { label: '5.2 GHz Max Clock Speed', value: '5.2 GHz', icon: 'Zap' },
-      { label: 'L3 Cache 256MB per CCD', value: '256MB', icon: 'Cpu' }
+      { label: 'HD Monitoring', value: '4K/8K', icon: 'Video' },
+      { label: 'Remote Access', value: '24/7', icon: 'Globe' },
+      { label: 'Night Vision', value: 'IR/Thermal', icon: 'Eye' },
+      { label: 'Storage', value: 'Edge/Cloud', icon: 'Database' }
     ]
   },
   {
-    id: 'optistream-bridge',
-    title: 'OptiStream Bridge',
-    category: 'Hardware',
-    performanceTier: 'Edge Specialized',
+    id: 'enterprise-management',
+    title: 'Enterprise Management Systems',
+    category: 'Enterprise',
+    performanceTier: 'Enterprise',
     availability: 'Instant',
-    description: 'Low-latency networking controller with integrated AI-driven traffic prioritization.',
-    price: '$1,850.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwooBz4g7XBqUQ1ony2rpYY5YFXqEsHJcNFsIiq3H1u_lWDEnIUwsMNtcGTSXlsQHey8n60kaUHHIcwCagHlpXNboB5cslQdckrmQnrRJrE9UAxcvbjIUXmw7ogRqqWTJtHCC7E4Gq1PJ40oILZ0KBbLBIA4QLuLzPEd-kEN3JlGhSsR5DflAFiG0ueWNp1acEVnFgDRcK7j_f9ZiMfBpmqo7tRxAW6dDDQCYKAA494bilHt8rF5RT8ZJwhZ_Ei4ikVs4swTqD',
-    cta: 'Add to Cart',
+    description: 'We develop and deploy intelligent operational platforms including Visitor Management System (VMS), Time Attendance Management System (TAMS), and People Management System (PMS). These systems streamline identity, access, attendance, and personnel workflows across facilities and organizations.',
+    price: 'Custom',
+    image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80',
+    cta: 'Request Demo',
     specs: [
-      { label: '100GbE Fiber Ports (x4)', value: '100GbE', icon: 'Network' },
-      { label: 'Hardware-level AES-256', value: 'AES-256', icon: 'Shield' }
+      { label: 'VMS/TAMS/PMS', value: 'Integrated', icon: 'Layers' },
+      { label: 'Identity Verification', value: 'Automated', icon: 'UserCheck' },
+      { label: 'Access Control', value: 'Integrated', icon: 'Lock' },
+      { label: 'Personnel Workflow', value: 'Streamlined', icon: 'Users' }
     ]
   },
   {
-    id: 'omnivault-storage',
-    title: 'OmniVault Storage',
-    category: 'Hardware',
-    performanceTier: 'Efficiency Optimized',
+    id: 'payment-gateway',
+    title: 'Payment Gateway Systems',
+    category: 'Financial',
+    performanceTier: 'Enterprise',
     availability: 'Instant',
-    description: 'Immutable storage array for mission-critical backups and long-term data archival.',
-    price: '$899.00/mo',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwooBz4g7XBqUQ1ony2rpYY5YFXqEsHJcNFsIiq3H1u_lWDEnIUwsMNtcGTSXlsQHey8n60kaUHHIcwCagHlpXNboB5cslQdckrmQnrRJrE9UAxcvbjIUXmw7ogRqqWTJtHCC7E4Gq1PJ40oILZ0KBbLBIA4QLuLzPEd-kEN3JlGhSsR5DflAFiG0ueWNp1acEVnFgDRcK7j_f9ZiMfBpmqo7tRxAW6dDDQCYKAA494bilHt8rF5RT8ZJwhZ_Ei4ikVs4swTqD',
-    cta: 'Add to Cart',
+    description: 'Secure and scalable payment integration solutions enabling digital transactions across kiosks, web platforms, and enterprise systems. Designed for reliability, compliance, and seamless user experience.',
+    price: 'Custom',
+    image: 'https://images.unsplash.com/photo-1556742049-36efd7a04977?auto=format&fit=crop&q=80',
+    cta: 'View Guide',
     specs: [
-      { label: '100GbE Fiber Ports (x4)', value: '100GbE', icon: 'Network' },
-      { label: 'Hardware-level AES-256', value: 'AES-256', icon: 'Shield' }
-    ]
-  },
-  {
-    id: 'cyber-shield-pro',
-    title: 'CyberShield Pro Appliance',
-    category: 'Software',
-    performanceTier: 'Edge Specialized',
-    availability: 'Instant',
-    description: 'Next-generation firewall appliance with real-time AI threat detection and zero-day mitigation.',
-    price: '$2,450.00/mo',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80',
-    cta: 'Add to Cart',
-    specs: [
-      { label: '50 Gbps Threat Prevention', value: '50 Gbps', icon: 'Shield' },
-      { label: 'AI Behavioral Analysis', value: 'AI Behavioral Analysis', icon: 'Cpu' }
-    ]
-  },
-  {
-    id: 'quantum-link-router',
-    title: 'QuantumLink Enterprise Router',
-    category: 'Hardware',
-    performanceTier: 'Ultra High Core',
-    availability: 'Instant',
-    description: 'High-capacity core routing platform designed for hyperscale data centers and ISP backbones.',
-    price: '$8,200.00',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80',
-    cta: 'Add to Cart',
-    specs: [
-      { label: '400GbE QSFP-DD Ports (x8)', value: '400GbE', icon: 'Network' },
-      { label: 'Carrier-Grade OS', value: 'Carrier-Grade OS', icon: 'Terminal' }
-    ]
-  },
-  {
-    id: 'cloud-native-orchestrator',
-    title: 'CloudNative Orchestrator Platform',
-    category: 'Hybrid',
-    performanceTier: 'Efficiency Optimized',
-    availability: 'Instant',
-    description: 'Unified multi-cloud management plane with automated resource provisioning and cost optimization.',
-    price: '$1,299.00/mo',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80',
-    cta: 'Add to Cart',
-    specs: [
-      { label: 'Kubernetes Native', value: 'Kubernetes Native', icon: 'Cloud' },
-      { label: 'Global Traffic Management', value: 'Global Traffic Management', icon: 'Globe' }
+      { label: 'Security Compliance', value: 'PCI-DSS', icon: 'Shield' },
+      { label: 'Multi-platform', value: 'Universal', icon: 'Layers' },
+      { label: 'Transaction Speed', value: '< 200ms', icon: 'Zap' },
+      { label: 'Fraud Detection', value: 'AI-Powered', icon: 'ShieldCheck' }
     ]
   }
 ];
 
 export const SERVICES: Service[] = [
   {
-    title: 'System Integration',
-    description: 'Unify your disparate technology stacks into a cohesive powerhouse. We specialize in connecting legacy on-premise hardware with modern SaaS platforms to ensure zero-latency data flow across your organization.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnYCn2-bFWXSINcXYW-R5382FghqvSvhznR8tfEycwMXJlI_XQgSP-rZwAAf7DDPbnQWNfhd9DoQXr35NRvErTBktKFyF1gV7ekhDvW9lDrc4zX9PBAslHmytGt6Uv3B8kinaUhwGJavy6J6Z1nJixrTKSKbEcFN34FK2GCGaRJo-YTbBGrI_q3W9BuwqRFFSca3D8LVbZXH6aIscENGVMbRXCMm17E6lbWzBKOL26VibBpyov2A2_IZbQLroZ00JlpJE-iBF5',
-    features: ['Legacy Modernization', 'API Management', 'Data Synchronization', 'Middleware Solutions']
+    title: 'Website Development',
+    description: 'Professional corporate and enterprise website design and development focused on performance, security, and user experience. From corporate profiles to system portals and dashboards.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
+    features: ['Corporate Profiles', 'System Portals', 'Enterprise Dashboards', 'Performance Optimized', 'Security First', 'High Availability']
   },
   {
-    title: 'Cloud Architecture',
-    description: 'Scale without limits. Our cloud-native engineering team designs robust architectures on AWS, Azure, and Google Cloud, prioritizing security, cost-optimization, and high availability.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDhWtzUevv9VUAFTIOd_fh6RWNzRMhET6_RBYlL9e49w-SI30AEPCwxnEObEZKDkcUYCcvIzp69XOtgPZApbWV7tMYq6CdBZNCopSDx1mda-kQ4mzuXjjY0rC2hN3dzF-BQIJHI8WxOowRueOeDxA28DeeniyIra5SRta7-q_vtcd3v5NowlO3haUlj_UmWC1D5ENfT1VSY0q_LVUD_SRuBxhDNXjEIBNfM7fZd3oGLPCLJz2mj5ZPj_lanJzzsRsR9MNb_9U9m',
-    features: ['Multi-Cloud Strategy', 'Serverless Computing', 'Kubernetes & Docker', 'FinOps & Cost Control']
+    title: 'Dashboards & Analytics',
+    description: 'Custom business intelligence dashboards that transform operational data into actionable insights. Real-time monitoring, reporting, and visualization tailored to management and operational teams.',
+    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80',
+    features: ['Real-time Monitoring', 'Custom Reporting', 'Actionable Insights', 'Operational Visualization', 'Predictive Analytics', 'Multi-source Data']
   },
   {
-    title: 'Hardware Engineering',
-    description: 'Precision-engineered hardware solutions designed for the most demanding environments. We provide custom PCB design, edge computing modules, and IoT industrial hardware prototypes.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCWeWODAHEe0VLO1A0VNwKLbFx6a7cEe1k0TQGLzobPuQjapeA1RU6ncAhixJFXHMq9piprujscKOf2z2O4a9Canks-Qw9CxDR5uH-XRlram3zAOa68kJErXSPHP4lBLUS5N_ma-9cmvKH7E1fgkA6ZnBNkwz623-lHlNDfIS-y3_fh_tEQ10UihVLLrq3WRsS4F_Nu89wLNQ9KAl5rclx0Yn_B14OSmwJt0u4cwp0ioUwm_AkyFM7c-5Xk85cwah9-sQ03zF_I',
-    features: ['Custom PCB Design', 'Edge Device R&D', 'Industrial IoT Modules', 'Hardware Security']
+    title: 'AI Chatbot Solutions',
+    description: 'Intelligent AI chatbots customized for business workflows including customer service, internal support, and automated interactions. Integrates with messaging platforms, websites, and enterprise systems.',
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80',
+    features: ['Workflow Automation', 'Internal Support', '24/7 Service', 'Multi-platform Integration', 'Deep Learning', 'Natural Language Processing']
+  },
+  {
+    title: 'Platform Integration',
+    description: 'Advanced integration services connecting security systems, enterprise software, databases, and third-party platforms into a unified ecosystem. We specialize in access control, surveillance, biometrics, and enterprise application integration.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80',
+    features: ['Access Control', 'Surveillance Integration', 'Biometrics Support', 'Database Unification', 'API Orchestration', 'Zero-Silo Operations']
   }
 ];
 
@@ -165,7 +134,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Scaling Global Payments with Zero Latency',
     category: 'FinTech',
     readTime: '8 min read',
-    description: 'How NeoBank integrated Nixfusion Labs to handle 50k transactions per second across 12 regions.',
+    description: 'How NeoBank integrated Cahaya Xcel to handle 50k transactions per second across 12 regions.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAR5c9NL8kGaU2vDSdOiuQTUsZgd8zUaYl4S0GtDQ0rBdQKqpek9cImxj7YAZR_yIKihj0fVMlBvO_t-zOY7-Kd9CMO0_jW5YV88wQiMeqbs3CoYKHQO9ZLMO0KROK5P6ITGofeZ3NPRorT4XCEret5JEXte4F7pLit4rxCX2tNlsPcJbq7xajTh4O3OCaH6rLRDvND1jmZgJ0yLTp8D324SFpSRk8oqk5buMwQIrhZ85l4hrmGTL_O53GjGg5HKZJezVprV8bJ'
   },
   {
@@ -185,8 +154,8 @@ export const CASE_STUDIES: CaseStudy[] = [
 ];
 
 export const TEAM: TeamMember[] = [
-  { name: 'Aadhi', role: 'Founder & CEO', icon: 'Layout', pattern: 'radial' },
-  { name: 'Surya', role: 'Chief Technology Officer', icon: 'Terminal', pattern: 'grid' },
-  { name: 'Jayaraman', role: 'Chief Operations Officer', icon: 'Settings', pattern: 'lines' },
-  { name: 'Kanniya', role: 'VP of Product', icon: 'Layers', pattern: 'dots' },
+  { name: 'Sarah Mitchell', role: 'CEO & Co-Founder', icon: 'Layout', pattern: 'radial' },
+  { name: 'James Chen', role: 'CTO & Co-Founder', icon: 'Terminal', pattern: 'grid' },
+  { name: 'Aisha Rahman', role: 'VP Engineering', icon: 'Settings', pattern: 'lines' },
+  { name: 'Michael Kim', role: 'VP Sales', icon: 'Layers', pattern: 'dots' },
 ];

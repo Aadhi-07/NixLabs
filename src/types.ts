@@ -13,7 +13,7 @@ export interface Stat {
 export interface Solution {
   id: string;
   title: string;
-  category: 'Hardware' | 'Software' | 'Hybrid' | 'Cloud';
+  category: 'Hardware' | 'Software' | 'Security' | 'Financial' | 'Enterprise' | 'Hybrid';
   description: string;
   price?: string;
   image: string;
@@ -21,7 +21,7 @@ export interface Solution {
 }
 
 export interface Product extends Solution {
-  performanceTier: 'Ultra High Core' | 'Edge Specialized' | 'Efficiency Optimized';
+  performanceTier: 'Professional' | 'Enterprise';
   availability: 'Instant' | 'Pre-order';
   specs: { label: string; value: string; icon: string }[];
 }
