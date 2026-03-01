@@ -26,7 +26,7 @@ export const FEATURED_SOLUTIONS: Solution[] = [
     description: 'Unified operational platforms including VMS, TAMS, and PMS to streamline identity, access, and personnel workflows.',
     price: '',
     image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80',
-    cta: 'Request Demo'
+    cta: 'View Details'
   },
   {
     id: 'ai-automation',
