@@ -106,25 +106,25 @@ export const SERVICES: Service[] = [
   {
     title: 'Website Development',
     description: 'Professional corporate and enterprise website design and development focused on performance, security, and user experience. From corporate profiles to system portals and dashboards.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80',
     features: ['Corporate Profiles', 'System Portals', 'Enterprise Dashboards', 'Performance Optimized', 'Security First', 'High Availability']
   },
   {
     title: 'Dashboards & Analytics',
     description: 'Custom business intelligence dashboards that transform operational data into actionable insights. Real-time monitoring, reporting, and visualization tailored to management and operational teams.',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?auto=format&fit=crop&q=80',
     features: ['Real-time Monitoring', 'Custom Reporting', 'Actionable Insights', 'Operational Visualization', 'Predictive Analytics', 'Multi-source Data']
   },
   {
     title: 'AI Chatbot Solutions',
     description: 'Intelligent AI chatbots customized for business workflows including customer service, internal support, and automated interactions. Integrates with messaging platforms, websites, and enterprise systems.',
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80',
     features: ['Workflow Automation', 'Internal Support', '24/7 Service', 'Multi-platform Integration', 'Deep Learning', 'Natural Language Processing']
   },
   {
     title: 'Platform Integration',
     description: 'Advanced integration services connecting security systems, enterprise software, databases, and third-party platforms into a unified ecosystem. We specialize in access control, surveillance, biometrics, and enterprise application integration.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80',
     features: ['Access Control', 'Surveillance Integration', 'Biometrics Support', 'Database Unification', 'API Orchestration', 'Zero-Silo Operations']
   }
 ];
