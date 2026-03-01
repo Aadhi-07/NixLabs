@@ -24,8 +24,8 @@ export const FEATURED_SOLUTIONS: Solution[] = [
     title: 'Enterprise Management Platforms',
     category: 'Enterprise',
     description: 'Unified operational platforms including VMS, TAMS, and PMS to streamline identity, access, and personnel workflows.',
-    price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80',
     cta: 'Request Demo'
   },
   {
@@ -33,8 +33,8 @@ export const FEATURED_SOLUTIONS: Solution[] = [
     title: 'AI-Powered Business Automation',
     category: 'Software',
     description: 'Intelligent AI chatbots and automated workflows designed to enhance internal support and customer service efficiency.',
-    price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80',
     cta: 'Explore AI'
   },
   {
@@ -42,8 +42,8 @@ export const FEATURED_SOLUTIONS: Solution[] = [
     title: 'Secure Payment & Digital Solutions',
     category: 'Financial',
     description: 'Scalable payment integration for kiosks and web platforms, designed for reliability, compliance, and seamless UX.',
-    price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1556742049-36efd7a04977?auto=format&fit=crop&q=80',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&q=80',
     cta: 'View Guide'
   }
 ];
@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
     availability: 'Instant',
     description: 'End-to-end surveillance solutions including installation, configuration, troubleshooting, and preventive maintenance. Our systems deliver high-definition monitoring, remote access, analytics, and secure storage for complete situational awareness.',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80',
     cta: 'Learn More',
     specs: [
       { label: 'HD Monitoring', value: '4K/8K', icon: 'Video' },
@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
     availability: 'Instant',
     description: 'We develop and deploy intelligent operational platforms including Visitor Management System (VMS), Time Attendance Management System (TAMS), and People Management System (PMS). These systems streamline identity, access, attendance, and personnel workflows across facilities and organizations.',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80',
     cta: 'Request Demo',
     specs: [
       { label: 'VMS/TAMS/PMS', value: 'Integrated', icon: 'Layers' },
@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     availability: 'Instant',
     description: 'Secure and scalable payment integration solutions enabling digital transactions across kiosks, web platforms, and enterprise systems. Designed for reliability, compliance, and seamless user experience.',
     price: 'Custom',
-    image: 'https://images.unsplash.com/photo-1556742049-36efd7a04977?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80',
     cta: 'View Guide',
     specs: [
       { label: 'Security Compliance', value: 'PCI-DSS', icon: 'Shield' },
@@ -135,21 +135,21 @@ export const CASE_STUDIES: CaseStudy[] = [
     category: 'FinTech',
     readTime: '8 min read',
     description: 'How NeoBank integrated Cahaya Xcel to handle 50k transactions per second across 12 regions.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAR5c9NL8kGaU2vDSdOiuQTUsZgd8zUaYl4S0GtDQ0rBdQKqpek9cImxj7YAZR_yIKihj0fVMlBvO_t-zOY7-Kd9CMO0_jW5YV88wQiMeqbs3CoYKHQO9ZLMO0KROK5P6ITGofeZ3NPRorT4XCEret5JEXte4F7pLit4rxCX2tNlsPcJbq7xajTh4O3OCaH6rLRDvND1jmZgJ0yLTp8D324SFpSRk8oqk5buMwQIrhZ85l4hrmGTL_O53GjGg5HKZJezVprV8bJ'
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80'
   },
   {
     title: 'Predictive Maintenance via Edge Computing',
     category: 'Manufacturing',
     readTime: '12 min read',
     description: 'Reducing downtime by 40% through real-time telemetry processing at the manufacturing edge.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCuAcBu1IbHja3qvTUoqzXg26_x3Cu2dSA9Qw_Fb0dS_tRVRF6o91V44dRxGssBtH-qY7dXKq86LzQyeLZMMXJqFAIcJTs4A6TvuWXlan8JcjVogs18qIdNetgFtZ2zMnrOMxe4FSlllTUsNo9mEBMLCPLVLt-4F-RWvBHd2WuTwfurqEWkeBvsnzmGb8ScWVgtY2JSZDPdAK20kGT5sITlU_vtH4CYL3hbANhxo_-ChMajvQ9ARJtozVhnOJh6zvXSJHiDbbLg'
+    image: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&q=80'
   },
   {
     title: 'HIPAA Compliant Data Lake Architecture',
     category: 'HealthTech',
     readTime: '6 min read',
     description: 'Securing 5M patient records with end-to-end encryption and automated compliance auditing.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCHq6N6xMXabUHX99-S6i84ZpHQY8ghCJ_UUW9ZbF5n-9865UMtAbtY_62wDZUKIO4_rf9dE2xtSz4-EAKKhbUSmaBIkS7ipm71DwSdAKLJcCGPZaPvj_6ZVVbSoOZhg0KoVqpBDv9A8PfTg9mzm8i9fq2S1G4wo5rHCVlkYmZrW9BP1cp_ckEabfQznH3AvJE7-OQyXO3R71VzD31WE--pqQYT1XQD6tReCLQy3OxhcBmXSo2gThZBLdjlISpoOjfJXy5pbAZW'
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80'
   }
 ];
 

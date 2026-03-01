@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
 
 const LOGOS = [
-    { name: 'Nvidia', url: 'https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg' },
-    { name: 'Intel', url: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg' },
-    { name: 'Microsoft', url: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-    { name: 'Amazon', url: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
-    { name: 'Google', url: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
-    { name: 'Oracle', url: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg' },
+    { name: 'Microsoft', url: 'https://img.icons8.com/color/96/microsoft.png' },
+    { name: 'Amazon', url: 'https://img.icons8.com/color/96/amazon.png' },
+    { name: 'Google', url: 'https://img.icons8.com/color/96/google-logo.png' },
+    // { name: 'Intel', url: 'https://img.icons8.com/color/96/intel.png' },
+    { name: 'IBM', url: 'https://img.icons8.com/color/96/ibm.png' },
+    { name: 'Oracle', url: 'https://img.icons8.com/color/96/oracle-logo.png' },
 ];
 
 export default function LogoCarousel() {

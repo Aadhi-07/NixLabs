@@ -1,18 +1,17 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
-import { MemoryStick as Memory, Cpu, Network, Shield, Database, RefreshCcw, ShoppingCart, Cloud, Terminal, Search, Grid, List, Download, X, ArrowRight } from 'lucide-react';
+import { MemoryStick as Memory, Cpu, Network, Shield, Database, RefreshCcw, MessageSquare, Cloud, Terminal, Search, Grid, List, Download, X, ArrowRight } from 'lucide-react';
 import * as Icons from 'lucide-react';
 import ProductModal from '../components/ProductModal';
 import { Product } from '../types';
 
 export default function Products() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [cartCount, setCartCount] = useState(0);
-  const [showCartToast, setShowCartToast] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -32,18 +31,8 @@ export default function Products() {
     });
   }, [activeCategory, searchQuery]);
 
-  const handleAddToCart = (title: string) => {
-    setCartCount(prev => prev + 1);
-
-    // Clear any existing timeout and reset toast to re-trigger animation
-    setShowCartToast(false);
-
-    // Small delay to allow state to reset before showing again
-    setTimeout(() => {
-      setShowCartToast(true);
-      // Auto hide after 3 seconds
-      setTimeout(() => setShowCartToast(false), 3000);
-    }, 10);
+  const handleRequestQuote = () => {
+    navigate('/contact');
   };
 
   const handleResetFilters = () => {
@@ -56,24 +45,6 @@ export default function Products() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-      {/* Cart Toast */}
-      <AnimatePresence>
-        {showCartToast && (
-          <motion.div
-            initial={{ opacity: 0, y: 50, x: '-50%' }}
-            animate={{ opacity: 1, y: 0, x: '-50%' }}
-            exit={{ opacity: 0, y: 20, x: '-50%' }}
-            className="fixed bottom-8 left-1/2 z-50 bg-[#135bec] text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 border border-white/20"
-          >
-            <ShoppingCart className="size-6" />
-            <span className="font-bold">Item added to enterprise cart</span>
-            <div className="size-6 bg-white/20 rounded-full flex items-center justify-center text-xs font-black">
-              {cartCount}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <div className="mb-12">
         <nav className="flex text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">
           <Link to="/" className="hover:text-[#3b82f6] transition-colors">Console</Link>
@@ -240,35 +211,49 @@ export default function Products() {
                       )}
                     </div>
 
-                    <div className={`${viewMode === 'list' ? 'flex items-center gap-12' : 'pt-6 border-t border-white/5 flex items-center justify-between'}`}>
-                      <div>
-                        <span className="text-[10px] text-slate-500 block font-black uppercase tracking-wider">
-                          {product.price?.includes('/mo') ? 'Subscription' : 'Unit Price'}
-                        </span>
-                        <div className="flex items-center gap-4">
-                          <span className="text-2xl font-bold text-white">{product.price}</span>
+                    <div className={`${viewMode === 'list' ? 'flex items-center gap-12' : 'pt-6 border-t border-white/5 flex flex-col gap-6'}`}>
+                      <div className="flex items-center justify-between w-full">
+                        <div>
+                          <span className="text-[10px] text-slate-500 block font-black uppercase tracking-wider">
+                            {product.price?.includes('/mo') ? 'Subscription' : 'Unit Price'}
+                          </span>
+                          <span className="text-2xl font-black text-white">{product.price}</span>
+                        </div>
+                        {viewMode === 'list' && (
+                          <div className="flex gap-3">
+                            <button
+                              onClick={handleRequestQuote}
+                              className="bg-slate-800 text-white p-3 rounded-xl hover:bg-[#135bec] transition-all border border-white/5"
+                              title="Request Quote"
+                            >
+                              <MessageSquare size={20} />
+                            </button>
+                            <button
+                              onClick={() => handleOpenModal(product)}
+                              className="bg-[#135bec] text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-all font-bold flex items-center gap-2"
+                            >
+                              View <ArrowRight size={16} />
+                            </button>
+                          </div>
+                        )}
+                      </div>
+
+                      {viewMode === 'grid' && (
+                        <div className="flex gap-3 mt-auto">
+                          <button
+                            onClick={handleRequestQuote}
+                            className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold text-sm hover:bg-[#135bec] transition-all border border-white/10"
+                          >
+                            Quote
+                          </button>
                           <button
                             onClick={() => handleOpenModal(product)}
-                            className="text-xs font-black text-[#135bec] uppercase tracking-widest hover:underline"
+                            className="flex-1 bg-[#135bec] text-white py-3 rounded-xl font-bold text-sm hover:bg-blue-600 transition-all shadow-lg shadow-[#135bec]/20 flex items-center justify-center gap-2"
                           >
-                            Details
+                            View <ArrowRight size={16} />
                           </button>
                         </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <button
-                          onClick={() => handleAddToCart(product.title)}
-                          className="bg-slate-800 text-white p-3 rounded-xl hover:bg-slate-700 transition-all border border-white/5"
-                        >
-                          <ShoppingCart size={20} />
-                        </button>
-                        <button
-                          onClick={() => handleOpenModal(product)}
-                          className="bg-[#135bec] text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-[#135bec]/20 font-bold flex items-center gap-2"
-                        >
-                          View <ArrowRight size={16} />
-                        </button>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>

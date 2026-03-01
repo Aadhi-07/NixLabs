@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { X, Check, Shield, Zap, Globe, Cpu, Layers } from 'lucide-react';
 import { Product } from '../types';
 import * as LucideIcons from 'lucide-react';
@@ -10,7 +11,13 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
+    const navigate = useNavigate();
     if (!product) return null;
+
+    const handleRequestQuote = () => {
+        onClose();
+        navigate('/contact');
+    };
 
     return (
         <AnimatePresence>
@@ -100,7 +107,10 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                                         <span className="text-[10px] text-slate-500 font-black uppercase block">Investment</span>
                                         <span className="text-3xl font-black text-white">{product.price}</span>
                                     </div>
-                                    <button className="bg-[#135bec] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/20">
+                                    <button
+                                        onClick={handleRequestQuote}
+                                        className="bg-[#135bec] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/20"
+                                    >
                                         Request Quote <LucideIcons.ArrowRight size={20} />
                                     </button>
                                 </div>

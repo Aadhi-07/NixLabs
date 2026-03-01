@@ -123,12 +123,12 @@ export default function Home() {
                   <p className="text-slate-400 text-base leading-relaxed mb-8">
                     {solution.description}
                   </p>
-                  <button
-                    onClick={() => handleOpenModal(solution.id)}
+                  <Link
+                    to="/products"
                     className="block w-full py-4 px-4 bg-slate-800 text-white hover:bg-[#3b82f6] rounded-xl font-bold transition-all text-sm text-center uppercase tracking-widest"
                   >
                     {solution.cta}
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
