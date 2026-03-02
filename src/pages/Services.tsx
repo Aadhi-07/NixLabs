@@ -15,18 +15,18 @@ export default function Services() {
             animate={{ opacity: 1, x: 0 }}
             className="relative z-10 max-w-3xl"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-[#135bec]/20 text-[#135bec] text-xs font-bold uppercase tracking-wider mb-6">Expertise & Innovation</span>
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-8">
-              Digital Solutions & <br /><span className="text-[#135bec]">Integration Expertise</span>
+            <span className="inline-block py-1 px-3 rounded-full bg-green-500/10 text-green-500 text-xs font-bold uppercase tracking-wider mb-6">Expertise & Innovation</span>
+            <h1 className="text-5xl md:text-7xl font-black text-green-50 leading-tight mb-8">
+              Digital Solutions & <br /><span className="text-green-500">Integration Expertise</span>
             </h1>
-            <p className="text-xl text-slate-400 leading-relaxed mb-10">
+            <p className="text-xl text-green-300 leading-relaxed mb-10">
               Cahaya Xcel delivers specialized IT services that enable organizations to digitize, automate, and integrate their operations efficiently.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/products" className="bg-[#135bec] text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-[#135bec]/30 transition-all">Explore Capabilities</Link>
+              <Link to="/products" className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-green-500/30 transition-all">Explore Capabilities</Link>
               <button
                 onClick={() => document.getElementById('how-we-work')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2 text-white"
+                className="bg-green-500/5 border border-green-500/10 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-500/10 transition-all flex items-center gap-2 text-green-100"
               >
                 Our Process <ArrowRight className="rotate-90" />
               </button>
@@ -34,7 +34,7 @@ export default function Services() {
           </motion.div>
         </div>
         <div className="absolute top-0 right-0 w-2/3 h-full hidden lg:block opacity-40">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_top_right,#135bec33,transparent,transparent)]"></div>
+          <div className="w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.15),transparent,transparent)]"></div>
         </div>
       </section>
 
@@ -42,8 +42,8 @@ export default function Services() {
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-white mb-4">Unified Ecosystem</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto font-medium">Cahaya Xcel Hub acts as the central intelligence layer, seamlessly bridging hardware and software units.</p>
+            <h2 className="text-4xl font-black text-green-100 mb-4">Unified Ecosystem</h2>
+            <p className="text-green-300 max-w-2xl mx-auto font-medium">Cahaya Xcel Hub acts as the central intelligence layer, seamlessly bridging hardware and software units.</p>
           </div>
           <IntegrationDiagram />
         </div>
@@ -69,19 +69,19 @@ export default function Services() {
                 </motion.div>
               </div>
               <div className="w-full lg:w-1/2">
-                <h2 className="text-4xl font-black text-white mb-6">{service.title}</h2>
-                <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+                <h2 className="text-4xl font-black text-green-100 mb-6">{service.title}</h2>
+                <p className="text-lg text-green-300 mb-8 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-slate-300">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-green-200">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-[#135bec] size-5" />
+                      <CheckCircle2 className="text-green-500 size-5" />
                       <span className="font-medium">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="inline-flex bg-[#135bec] text-white px-8 py-3.5 rounded-lg font-bold hover:bg-[#135bec]/90 transition-all items-center gap-3 shadow-lg shadow-[#135bec]/20">
+                <Link to="/contact" className="inline-flex bg-green-600 text-white px-8 py-3.5 rounded-lg font-bold hover:bg-green-700 transition-all items-center gap-3 shadow-lg shadow-green-500/20">
                   Consult an Expert <ArrowRight size={20} />
                 </Link>
               </div>
@@ -94,12 +94,12 @@ export default function Services() {
       <section id="how-we-work" className="py-24 bg-[#0B0F17]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-black text-white mb-4">How We Work</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">Our rigorous four-stage delivery process ensures quality, security, and scalability in every project we undertake.</p>
+            <h2 className="text-4xl font-black text-green-100 mb-4">How We Work</h2>
+            <p className="text-green-300 max-w-2xl mx-auto">Our rigorous four-stage delivery process ensures quality, security, and scalability in every project we undertake.</p>
           </div>
           <div className="relative">
             <div className="hidden lg:block absolute top-12 left-0 w-full h-1 bg-white/5 -z-10">
-              <div className="h-full bg-[#135bec] w-1/4"></div>
+              <div className="h-full bg-green-600 w-1/4"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
               {[
@@ -109,11 +109,11 @@ export default function Services() {
                 { step: '04', title: 'Deployment', icon: Rocket, desc: 'Seamless go-live transition with 24/7 monitoring and long-term maintenance support.' }
               ].map((item, i) => (
                 <div key={item.step} className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                  <div className={`size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl ${i === 0 ? 'bg-[#135bec] text-white shadow-[#135bec]/30' : i === 1 ? 'bg-[#161C27] border-2 border-[#135bec] text-[#135bec] shadow-[#135bec]/10' : 'bg-[#161C27] border-2 border-white/10 text-slate-500'}`}>
+                  <div className={`size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl ${i === 0 ? 'bg-green-600 text-white shadow-green-500/30' : i === 1 ? 'bg-[#161C27] border-2 border-green-600 text-green-500 shadow-green-500/10' : 'bg-[#161C27] border-2 border-green-500/10 text-green-500/60'}`}>
                     <item.icon size={40} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{item.step}. {item.title}</h3>
-                  <p className="text-slate-400">{item.desc}</p>
+                  <h3 className="text-xl font-bold mb-3 text-green-100">{item.step}. {item.title}</h3>
+                  <p className="text-green-300">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -124,7 +124,7 @@ export default function Services() {
       {/* CTA */}
       <section className="py-20 bg-[#0B0F17]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#135bec] rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+          <div className="bg-green-600 rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
                 <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
@@ -132,9 +132,9 @@ export default function Services() {
             </div>
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Ready to integrate your future?</h2>
-              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">Join organizations worldwide that trust Cahaya Xcel for their unified intelligent platforms.</p>
+              <p className="text-green-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">Join organizations worldwide that trust Cahaya Xcel for their unified intelligent platforms.</p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/contact" className="bg-white text-[#135bec] px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl shadow-black/20">Get Started Today</Link>
+                <Link to="/contact" className="bg-white text-green-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-all shadow-xl shadow-black/20">Get Started Today</Link>
                 <Link to="/contact" className="bg-transparent border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">Schedule a Demo</Link>
               </div>
             </div>

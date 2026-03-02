@@ -46,52 +46,52 @@ export default function Contact() {
           <div className="w-full lg:w-1/3">
             <h1 className="text-5xl font-black text-white mb-8 tracking-tight">
               Let's Build <br />
-              <span className="text-[#135bec]">Together</span>
+              <span className="text-green-500">Together</span>
             </h1>
 
-            <p className="text-xl text-slate-400 leading-relaxed mb-12">
+            <p className="text-xl text-green-300 leading-relaxed mb-12">
               Have a complex integration challenge? Our senior engineers are
               ready to help you architect a solution that scales.
             </p>
 
             <div className="space-y-8">
               <div className="flex items-start gap-6">
-                <div className="size-12 bg-[#135bec]/10 rounded-xl flex items-center justify-center text-[#135bec] shrink-0">
+                <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-1">
+                  <h4 className="text-sm font-black text-green-500 uppercase tracking-widest mb-1">
                     Email Us
                   </h4>
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-lg font-bold text-green-100">
                     cahayaxcel@gmail.com
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="size-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 shrink-0">
+                <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-1">
+                  <h4 className="text-sm font-black text-green-500 uppercase tracking-widest mb-1">
                     Call Support
                   </h4>
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-lg font-bold text-green-100">
                     +1 (555) 123-4567
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="size-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-500 shrink-0">
+                <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-1">
+                  <h4 className="text-sm font-black text-green-500 uppercase tracking-widest mb-1">
                     Headquarters
                   </h4>
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-lg font-bold text-green-100">
                     100 Innovation Drive, <br />
                     San Francisco, CA 94105
                   </p>
@@ -99,12 +99,12 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-16 pt-16 border-t border-slate-800">
-              <h4 className="text-sm font-black text-white uppercase tracking-widest mb-8">
+            <div className="mt-16 pt-16 border-t border-green-800/20">
+              <h4 className="text-sm font-black text-green-100 uppercase tracking-widest mb-8">
                 San Francisco Headquarters
               </h4>
 
-              <div className="aspect-video rounded-3xl overflow-hidden border border-slate-800 relative group shadow-2xl">
+              <div className="aspect-video rounded-3xl overflow-hidden border border-green-800/20 relative group shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
                   alt="Cahaya Xcel SF Office"
@@ -113,21 +113,21 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-transparent to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4 right-4 bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-xl">
                   <p className="text-white text-xs font-bold">100 Innovation Drive, CA 94105</p>
-                  <p className="text-slate-500 text-[10px] uppercase font-black mt-1 tracking-widest">Main Operations Hub</p>
+                  <p className="text-green-500 text-[10px] uppercase font-black mt-1 tracking-widest">Main Operations Hub</p>
                 </div>
               </div>
 
-              <div className="mt-8 bg-slate-900 border border-slate-800 rounded-3xl p-6 flex items-center justify-between group hover:border-[#135bec] transition-all cursor-pointer">
+              <div className="mt-8 bg-slate-900 border border-green-800/20 rounded-3xl p-6 flex items-center justify-between group hover:border-green-500 transition-all cursor-pointer">
                 <div className="flex items-center gap-4">
-                  <div className="size-12 bg-[#135bec]/10 rounded-xl flex items-center justify-center text-[#135bec]">
+                  <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h5 className="text-white font-bold text-sm">Interactive Map</h5>
-                    <p className="text-slate-500 text-xs">Open in Google Maps</p>
+                    <h5 className="text-green-100 font-bold text-sm">Interactive Map</h5>
+                    <p className="text-green-500 text-xs">Open in Google Maps</p>
                   </div>
                 </div>
-                <ArrowRight className="text-slate-500 group-hover:text-white group-hover:translate-x-2 transition-all" size={20} />
+                <ArrowRight className="text-green-500 group-hover:text-white group-hover:translate-x-2 transition-all" size={20} />
               </div>
             </div>
           </div>
@@ -137,14 +137,14 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-[#161c2d] p-10 lg:p-16 rounded-[2.5rem] border border-slate-800 shadow-2xl relative overflow-hidden"
+              className="bg-[#161c2d] p-10 lg:p-16 rounded-[2.5rem] border border-green-800/20 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5">
                 <MessageSquare size={200} />
               </div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold text-white mb-10">
+                <h2 className="text-3xl font-bold text-green-100 mb-10">
                   Project Inquiry
                 </h2>
 
@@ -167,7 +167,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                        <label className="text-xs font-black text-green-500 uppercase tracking-widest">
                           Full Name
                         </label>
                         <input
@@ -175,12 +175,12 @@ export default function Contact() {
                           type="text"
                           name="name"
                           placeholder="John Doe"
-                          className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
+                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                        <label className="text-xs font-black text-green-500 uppercase tracking-widest">
                           Work Email
                         </label>
                         <input
@@ -188,14 +188,14 @@ export default function Contact() {
                           type="email"
                           name="email"
                           placeholder="john@enterprise.com"
-                          className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
+                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                        <label className="text-xs font-black text-green-500 uppercase tracking-widest">
                           Company
                         </label>
                         <input
@@ -203,17 +203,17 @@ export default function Contact() {
                           type="text"
                           name="company"
                           placeholder="Acme Corp"
-                          className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
+                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                        <label className="text-xs font-black text-green-500 uppercase tracking-widest">
                           Solution Interest
                         </label>
                         <select
                           name="solution"
-                          className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
+                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         >
                           <option>CCTV & Surveillance</option>
                           <option>Visitor Management (VMS)</option>
@@ -224,7 +224,7 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-black text-slate-500 uppercase tracking-widest">
+                      <label className="text-xs font-black text-green-500 uppercase tracking-widest">
                         Project Description
                       </label>
                       <textarea
@@ -232,7 +232,7 @@ export default function Contact() {
                         name="message"
                         rows={5}
                         placeholder="Tell us about your integration needs..."
-                        className="w-full bg-slate-900 border-slate-800 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all resize-none"
+                        className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none"
                       ></textarea>
                     </div>
 
@@ -246,10 +246,10 @@ export default function Contact() {
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-4">
                       <div className="flex items-center gap-6">
-                        <div className="flex items-center gap-2 text-slate-500 text-xs font-bold">
+                        <div className="flex items-center gap-2 text-green-500 text-xs font-bold">
                           <Clock size={14} /> 24h Response
                         </div>
-                        <div className="flex items-center gap-2 text-slate-500 text-xs font-bold">
+                        <div className="flex items-center gap-2 text-green-500 text-xs font-bold">
                           <ShieldCheck size={14} /> Secure Data
                         </div>
                       </div>
@@ -257,7 +257,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full md:w-auto bg-[#135bec] text-white px-12 py-5 rounded-xl font-black text-lg hover:bg-blue-600 transition-all shadow-xl shadow-[#135bec]/20 flex items-center justify-center gap-3 disabled:opacity-60"
+                        className="w-full md:w-auto bg-green-600 text-white px-12 py-5 rounded-xl font-black text-lg hover:bg-green-700 transition-all shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 disabled:opacity-60"
                       >
                         {isSubmitting ? "Sending..." : "Send Message"}
                         <Send size={20} />

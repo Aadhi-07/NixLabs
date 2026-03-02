@@ -46,17 +46,17 @@ export default function Products() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
       <div className="mb-12">
-        <nav className="flex text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">
-          <Link to="/" className="hover:text-[#3b82f6] transition-colors">Console</Link>
-          <span className="mx-3 text-slate-700">/</span>
-          <span className="text-slate-300">Intelligent Systems</span>
+        <nav className="flex text-xs font-semibold uppercase tracking-widest text-green-500 mb-6">
+          <Link to="/" className="hover:text-green-400 transition-colors">Console</Link>
+          <span className="mx-3 text-green-800">/</span>
+          <span className="text-green-200">Intelligent Systems</span>
         </nav>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold tracking-tighter text-white mb-4">Intelligent Systems & Infrastructure Solutions</h1>
-            <p className="text-lg text-slate-400 leading-relaxed">Cahaya Xcel provides robust technology products designed to enhance security, efficiency, and operational control across organizations.</p>
+            <h1 className="text-5xl font-bold tracking-tighter text-green-50 mb-4">Intelligent Systems & Infrastructure Solutions</h1>
+            <p className="text-lg text-green-300 leading-relaxed">Cahaya Xcel provides robust technology products designed to enhance security, efficiency, and operational control across organizations.</p>
           </div>
-          <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1f2937] border border-white/10 rounded-xl text-sm font-bold text-white hover:bg-slate-800 transition-all">
+          <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1f2937] border border-green-500/10 rounded-xl text-sm font-bold text-green-100 hover:bg-green-900/40 transition-all">
             <Download size={20} />
             Download API Specs
           </Link>
@@ -68,13 +68,13 @@ export default function Products() {
         <aside className="w-full lg:w-72 flex-shrink-0">
           <div className="sticky top-32 space-y-10">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 size-4" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-green-500 size-4" />
               <input
                 type="text"
                 placeholder="Search assets..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:border-[#135bec] focus:ring-1 focus:ring-[#135bec] transition-all"
+                className="w-full bg-white/5 border border-green-500/10 rounded-xl pl-11 pr-4 py-3 text-sm text-green-100 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
               />
               {searchQuery && (
                 <button
@@ -87,15 +87,15 @@ export default function Products() {
             </div>
 
             <div>
-              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-6">Product Categories</h3>
+              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-green-500 mb-6">Product Categories</h3>
               <div className="space-y-2">
                 {categories.map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={`w-full flex items-center justify-between px-4 py-3 rounded-xl font-bold transition-all ${activeCategory === cat
-                      ? 'bg-[#135bec] text-white shadow-lg shadow-[#135bec]/20'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5'
+                      ? 'bg-green-600 text-white shadow-lg shadow-green-500/20'
+                      : 'text-green-300 hover:text-white hover:bg-white/5'
                       }`}
                   >
                     <span className="flex items-center gap-3">
@@ -114,24 +114,24 @@ export default function Products() {
             </div>
 
             <div>
-              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-6">Advanced Filters</h3>
+              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-green-500 mb-6">Advanced Filters</h3>
               <div className="space-y-6">
                 <div>
-                  <label className="text-sm font-bold text-slate-300 mb-4 block">Performance Tier</label>
+                  <label className="text-sm font-bold text-green-200 mb-4 block">Performance Tier</label>
                   <div className="space-y-3">
                     {['Enterprise'].map((tier) => (
                       <label key={tier} className="flex items-center gap-3 cursor-pointer group">
-                        <input type="checkbox" defaultChecked className="rounded-md border-white/10 bg-white/5 text-[#135bec] focus:ring-[#135bec] focus:ring-offset-[#0a0f1a]" />
-                        <span className="text-sm text-slate-400 group-hover:text-white transition-colors">{tier} Tier Assets</span>
+                        <input type="checkbox" defaultChecked className="rounded-md border-green-500/10 bg-white/5 text-green-600 focus:ring-green-500 focus:ring-offset-[#0a0f1a]" />
+                        <span className="text-sm text-green-300 group-hover:text-white transition-colors">{tier} Tier Assets</span>
                       </label>
                     ))}
                   </div>
                 </div>
-                <div className="pt-6 border-t border-white/10">
-                  <label className="text-sm font-bold text-slate-300 mb-4 block">Availability</label>
+                <div className="pt-6 border-t border-green-500/10">
+                  <label className="text-sm font-bold text-green-200 mb-4 block">Availability</label>
                   <label className="flex items-center gap-3 cursor-pointer group">
-                    <input type="checkbox" defaultChecked className="rounded-md border-white/10 bg-white/5 text-[#135bec] focus:ring-[#135bec] focus:ring-offset-[#0a0f1a]" />
-                    <span className="text-sm text-slate-400 group-hover:text-white transition-colors">Instant Deployment</span>
+                    <input type="checkbox" defaultChecked className="rounded-md border-green-500/10 bg-white/5 text-green-600 focus:ring-green-500 focus:ring-offset-[#0a0f1a]" />
+                    <span className="text-sm text-green-300 group-hover:text-white transition-colors">Instant Deployment</span>
                   </label>
                 </div>
               </div>
@@ -141,25 +141,25 @@ export default function Products() {
 
         {/* Product Grid */}
         <div className="flex-1">
-          <div className="flex items-center justify-between mb-8 pb-8 border-b border-white/10">
-            <p className="text-sm text-slate-500">Indexing <span className="font-bold text-white">{filteredProducts.length}</span> of {PRODUCTS.length} enterprise assets</p>
+          <div className="flex items-center justify-between mb-8 pb-8 border-b border-green-500/10">
+            <p className="text-sm text-green-500">Indexing <span className="font-bold text-green-100">{filteredProducts.length}</span> of {PRODUCTS.length} enterprise assets</p>
             <div className="flex items-center gap-6">
-              <select className="bg-transparent border-none text-sm font-bold text-slate-300 focus:ring-0 cursor-pointer hover:text-white">
+              <select className="bg-transparent border-none text-sm font-bold text-green-200 focus:ring-0 cursor-pointer hover:text-white">
                 <option className="bg-[#0a0f1a]">Sort: Highest Priority</option>
                 <option className="bg-[#0a0f1a]">Sort: New Releases</option>
                 <option className="bg-[#0a0f1a]">Sort: Price Ascending</option>
                 <option className="bg-[#0a0f1a]">Sort: Price Descending</option>
               </select>
-              <div className="flex items-center border border-white/10 rounded-xl overflow-hidden bg-white/5">
+              <div className="flex items-center border border-green-500/10 rounded-xl overflow-hidden bg-white/5">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2.5 transition-colors ${viewMode === 'grid' ? 'bg-[#135bec] text-white' : 'text-slate-500 hover:text-white'}`}
+                  className={`p-2.5 transition-colors ${viewMode === 'grid' ? 'bg-green-600 text-white' : 'text-green-500 hover:text-white'}`}
                 >
                   <Grid size={20} />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2.5 transition-colors ${viewMode === 'list' ? 'bg-[#135bec] text-white' : 'text-slate-500 hover:text-white'}`}
+                  className={`p-2.5 transition-colors ${viewMode === 'list' ? 'bg-green-600 text-white' : 'text-green-500 hover:text-white'}`}
                 >
                   <List size={20} />
                 </button>
@@ -177,7 +177,7 @@ export default function Products() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   whileHover={viewMode === 'grid' ? { y: -8 } : { x: 8 }}
-                  className={`group bg-[#1f2937] border border-white/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-[#135bec]/50 ${viewMode === 'list' ? 'flex items-center p-4 gap-8' : ''
+                  className={`group bg-[#161c2d] border border-green-900/20 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-green-500/50 ${viewMode === 'list' ? 'flex items-center p-4 gap-8' : ''
                     }`}
                 >
                   <div className={`relative bg-slate-900 overflow-hidden ${viewMode === 'list' ? 'h-32 w-48 shrink-0 rounded-xl' : 'h-56'}`}>
@@ -194,7 +194,7 @@ export default function Products() {
                   </div>
                   <div className={`flex-1 ${viewMode === 'list' ? 'flex items-center justify-between' : 'p-6'}`}>
                     <div className={viewMode === 'list' ? 'max-w-md' : ''}>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#135bec] transition-colors">{product.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">{product.title}</h3>
                       <p className="text-sm text-slate-400 mb-6 line-clamp-2 leading-relaxed">{product.description}</p>
                       {viewMode === 'grid' && (
                         <div className="space-y-3 mb-8">
@@ -202,7 +202,7 @@ export default function Products() {
                             const Icon = (Icons as any)[spec.icon];
                             return (
                               <div key={i} className="flex items-center gap-3 text-xs text-slate-400">
-                                {Icon && <Icon size={18} className="text-[#135bec]" />}
+                                {Icon && <Icon size={18} className="text-green-500" />}
                                 {spec.label}
                               </div>
                             );
@@ -223,14 +223,14 @@ export default function Products() {
                           <div className="flex gap-3">
                             <button
                               onClick={handleRequestQuote}
-                              className="bg-slate-800 text-white p-3 rounded-xl hover:bg-[#135bec] transition-all border border-white/5"
+                              className="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition-all border border-white/5"
                               title="Request Quote"
                             >
                               <MessageSquare size={20} />
                             </button>
                             <button
                               onClick={() => handleOpenModal(product)}
-                              className="bg-[#135bec] text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-all font-bold flex items-center gap-2"
+                              className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition-all font-bold flex items-center gap-2"
                             >
                               View <ArrowRight size={16} />
                             </button>
@@ -242,13 +242,13 @@ export default function Products() {
                         <div className="flex gap-3 mt-auto">
                           <button
                             onClick={handleRequestQuote}
-                            className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold text-sm hover:bg-[#135bec] transition-all border border-white/10"
+                            className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold text-sm hover:bg-green-600 transition-all border border-white/10"
                           >
                             Quote
                           </button>
                           <button
                             onClick={() => handleOpenModal(product)}
-                            className="flex-1 bg-[#135bec] text-white py-3 rounded-xl font-bold text-sm hover:bg-blue-600 transition-all shadow-lg shadow-[#135bec]/20 flex items-center justify-center gap-2"
+                            className="flex-1 bg-green-600 text-white py-3 rounded-xl font-bold text-sm hover:bg-green-700 transition-all shadow-lg shadow-green-500/20 flex items-center justify-center gap-2"
                           >
                             View <ArrowRight size={16} />
                           </button>
@@ -273,7 +273,7 @@ export default function Products() {
                 <p className="text-slate-500">Try adjusting your filters or search query to find what you're looking for.</p>
                 <button
                   onClick={() => { setActiveCategory('All'); setSearchQuery(''); }}
-                  className="mt-8 text-[#135bec] font-bold hover:underline"
+                  className="mt-8 text-green-500 font-bold hover:underline"
                 >
                   Reset all filters
                 </button>

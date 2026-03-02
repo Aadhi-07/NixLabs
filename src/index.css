@@ -6,16 +6,16 @@
 
 @layer base {
   body {
-    @apply bg-[#0a0f1d] text-slate-200 antialiased;
+    @apply bg-[#0a0f1d] text-green-100 antialiased;
   }
 }
 
 .markdown-body {
-  @apply text-slate-300 leading-relaxed;
+  @apply text-green-200 leading-relaxed;
 }
 
 .markdown-body h1, .markdown-body h2, .markdown-body h3 {
-  @apply text-white font-bold mt-8 mb-4;
+  @apply text-green-400 font-bold mt-8 mb-4;
 }
 
 .markdown-body p {

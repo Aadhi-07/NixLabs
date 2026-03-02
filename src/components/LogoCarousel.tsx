@@ -13,7 +13,7 @@ export default function LogoCarousel() {
     return (
         <div className="py-20 border-y border-slate-800/50 bg-[#0a0f1d]/50 backdrop-blur-sm overflow-hidden relative">
             <div className="max-w-7xl mx-auto px-4 mb-12 text-center">
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">Global Partners & Trusted By</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">Global Partners & Trusted By</p>
             </div>
 
             <div className="flex relative items-center">
@@ -30,7 +30,7 @@ export default function LogoCarousel() {
                     {[...LOGOS, ...LOGOS, ...LOGOS].map((logo, i) => (
                         <div key={i} className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                             <img src={logo.url} alt={logo.name} className="h-8 md:h-10 w-auto object-contain" />
-                            <span className="text-white font-bold text-lg tracking-tight uppercase">{logo.name}</span>
+                            <span className="text-green-300 font-bold text-lg tracking-tight uppercase">{logo.name}</span>
                         </div>
                     ))}
                 </motion.div>
