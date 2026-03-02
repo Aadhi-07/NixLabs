@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
           <div className="col-span-2">
             <div className="flex items-center mb-8">
-              <img src="/Logo_green.png" alt="Cahaya Xcel" className="h-10 md:h-12" />
+              <img src="/Logo_green.svg" alt="Cahaya Xcel" className="h-10 md:h-12" />
             </div>
             <p className="text-green-300 text-base leading-relaxed mb-8 max-w-sm">
               Delivering advanced IT solutions that unify security, operations, and digital platforms into a single intelligent ecosystem.
