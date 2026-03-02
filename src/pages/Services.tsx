@@ -34,7 +34,7 @@ export default function Services() {
           </motion.div>
         </div>
         <div className="absolute top-0 right-0 w-2/3 h-full hidden lg:block opacity-40">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.15),transparent,transparent)]"></div>
+          <div className="w-full h-full bg-black"></div>
         </div>
       </section>
 
@@ -51,7 +51,7 @@ export default function Services() {
 
       {/* Service Details */}
       {SERVICES.map((service, index) => (
-        <section key={service.title} className={`py-24 ${index % 2 === 0 ? 'bg-[#161C27]/50 border-y border-white/5' : 'bg-[#0B0F17]'}`}>
+        <section key={service.title} className={`py-24 ${index % 2 === 0 ? 'bg-black/50 border-y border-white/5' : 'bg-black'}`}>
           <div className="max-w-7xl mx-auto px-6">
             <div className={`flex flex-col lg:flex-row items-center gap-16 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               <div className="w-full lg:w-1/2">
@@ -65,7 +65,7 @@ export default function Services() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17]/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 </motion.div>
               </div>
               <div className="w-full lg:w-1/2">
@@ -91,7 +91,7 @@ export default function Services() {
       ))}
 
       {/* How We Work */}
-      <section id="how-we-work" className="py-24 bg-[#0B0F17]">
+      <section id="how-we-work" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-black text-green-100 mb-4">How We Work</h2>
@@ -109,7 +109,7 @@ export default function Services() {
                 { step: '04', title: 'Deployment', icon: Rocket, desc: 'Seamless go-live transition with 24/7 monitoring and long-term maintenance support.' }
               ].map((item, i) => (
                 <div key={item.step} className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                  <div className={`size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl ${i === 0 ? 'bg-green-600 text-white shadow-green-500/30' : i === 1 ? 'bg-[#161C27] border-2 border-green-600 text-green-500 shadow-green-500/10' : 'bg-[#161C27] border-2 border-green-500/10 text-green-500/60'}`}>
+                  <div className={`size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl ${i === 0 ? 'bg-green-600 text-white shadow-green-500/30' : i === 1 ? 'bg-black border-2 border-green-600 text-green-500 shadow-green-500/10' : 'bg-black border-2 border-green-500/10 text-green-500/60'}`}>
                     <item.icon size={40} />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-green-100">{item.step}. {item.title}</h3>
@@ -122,7 +122,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0B0F17]">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-green-600 rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">

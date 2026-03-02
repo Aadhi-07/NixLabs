@@ -29,7 +29,7 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 z-[100] bg-[#0a0f1d]/90 backdrop-blur-md"
+                        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md"
                     />
 
                     {/* Modal */}
@@ -37,7 +37,7 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-[95%] max-w-5xl max-h-[90vh] overflow-hidden bg-[#161c2d] rounded-[2.5rem] border border-green-800/20 shadow-2xl flex flex-col md:flex-row"
+                        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-[95%] max-w-5xl max-h-[90vh] overflow-hidden bg-black rounded-[2.5rem] border border-green-800/20 shadow-2xl flex flex-col md:flex-row"
                     >
                         {/* Close Button */}
                         <button
@@ -54,7 +54,7 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                                 alt={product.title}
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#161c2d] via-transparent to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-transparent to-transparent"></div>
                             <div className="absolute bottom-8 left-8">
                                 <span className="bg-green-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-lg shadow-xl">
                                     {product.category}
@@ -122,3 +122,4 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
         </AnimatePresence>
     );
 }
+

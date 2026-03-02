@@ -11,7 +11,7 @@ const LOGOS = [
 
 export default function LogoCarousel() {
     return (
-        <div className="py-20 border-y border-slate-800/50 bg-[#0a0f1d]/50 backdrop-blur-sm overflow-hidden relative">
+        <div className="py-20 border-y border-slate-800/50 bg-black/50 backdrop-blur-sm overflow-hidden relative">
             <div className="max-w-7xl mx-auto px-4 mb-12 text-center">
                 <p className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500">Global Partners & Trusted By</p>
             </div>
@@ -36,9 +36,10 @@ export default function LogoCarousel() {
                 </motion.div>
 
                 {/* Gradient Overlays */}
-                <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#0a0f1d] to-transparent z-10"></div>
-                <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#0a0f1d] to-transparent z-10"></div>
+                <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-10"></div>
             </div>
         </div>
     );
 }
+

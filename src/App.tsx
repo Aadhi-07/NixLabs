@@ -22,7 +22,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0a0f1d] text-slate-200 font-sans selection:bg-[#3b82f6] selection:text-white">
+      <div className="min-h-screen bg-black text-slate-200 font-sans selection:bg-[#3b82f6] selection:text-white">
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -40,3 +40,4 @@ export default function App() {
     </Router>
   );
 }
+

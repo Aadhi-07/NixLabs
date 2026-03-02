@@ -7,7 +7,7 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0a0f1d]/80 backdrop-blur-xl border-b border-slate-800/60">
+    <header className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-xl border-b border-slate-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center group">
@@ -50,3 +50,4 @@ export default function Navbar() {
     </header>
   );
 }
+

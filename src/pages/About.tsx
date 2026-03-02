@@ -8,8 +8,8 @@ export default function About() {
   return (
     <main>
       {/* Hero */}
-      <section className="py-24 bg-[#0a0f1d] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.1)_0%,transparent_70%)]"></div>
+      <section className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-black"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.span
@@ -56,7 +56,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-32 bg-[#0B0F17]">
+      <section className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-black text-white mb-4">Our Values</h2>
@@ -67,7 +67,7 @@ export default function About() {
               { icon: Zap, title: 'Innovation', desc: 'We constantly push boundaries to deliver cutting-edge solutions for complex challenges.' },
               { icon: Layers, title: 'Partnership', desc: 'We work alongside our clients as true partners, invested in their long-term success.' }
             ].map((value) => (
-              <div key={value.title} className="group p-10 bg-[#161c2d] rounded-3xl border border-green-900/20 hover:border-green-500/50 transition-all">
+              <div key={value.title} className="group p-10 bg-black rounded-3xl border border-green-900/20 hover:border-green-500/50 transition-all">
                 <div className="size-16 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-8 group-hover:scale-110 transition-transform">
                   <value.icon size={32} />
                 </div>
@@ -80,7 +80,7 @@ export default function About() {
       </section>
 
       {/* Leadership */}
-      <section className="py-32 bg-[#0a0f1d]">
+      <section className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-black text-green-100 mb-4">Leadership Team</h2>
@@ -93,9 +93,9 @@ export default function About() {
                 <motion.div
                   key={member.name}
                   whileHover={{ y: -10 }}
-                  className="bg-[#161c2d] rounded-3xl overflow-hidden border border-slate-800/50 group"
+                  className="bg-black rounded-3xl overflow-hidden border border-slate-800/50 group"
                 >
-                  <div className="aspect-square bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                  <div className="aspect-square bg-black relative flex items-center justify-center overflow-hidden">
                     {/* Abstract Pattern Background */}
                     <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
                       {member.pattern === 'radial' && <div className="w-full h-full bg-[radial-gradient(circle_at_center,#22c55e_0%,transparent_70%)]"></div>}
@@ -117,7 +117,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-32 bg-[#0B0F17] border-t border-slate-800">
+      <section className="py-32 bg-black border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-20">
             <div className="w-full md:w-1/3">
@@ -138,7 +138,7 @@ export default function About() {
                 { year: '2026', title: 'Intelligent Ecosystems', desc: 'Launching unified security and operational platforms for healthcare and corporate offices.' }
               ].map((milestone) => (
                 <div key={milestone.year} className="relative pl-12">
-                  <div className="absolute left-0 top-1.5 size-8 bg-green-500 rounded-full border-4 border-[#0B0F17] -ml-0.5"></div>
+                  <div className="absolute left-0 top-1.5 size-8 bg-green-500 rounded-full border-4 border-black -ml-0.5"></div>
                   <div className="text-2xl font-black text-green-100 mb-2">{milestone.year}</div>
                   <h3 className="text-xl font-bold text-green-400 mb-3">{milestone.title}</h3>
                   <p className="text-green-300 max-w-xl">{milestone.desc}</p>

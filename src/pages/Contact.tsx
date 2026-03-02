@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="py-24 bg-[#0a0f1d]">
+    <main className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Contact Info */}
@@ -110,14 +110,14 @@ export default function Contact() {
                   alt="Cahaya Xcel SF Office"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
                 <div className="absolute bottom-4 left-4 right-4 bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-xl">
                   <p className="text-white text-xs font-bold">100 Innovation Drive, CA 94105</p>
                   <p className="text-green-500 text-[10px] uppercase font-black mt-1 tracking-widest">Main Operations Hub</p>
                 </div>
               </div>
 
-              <div className="mt-8 bg-slate-900 border border-green-800/20 rounded-3xl p-6 flex items-center justify-between group hover:border-green-500 transition-all cursor-pointer">
+              <div className="mt-8 bg-black border border-green-800/20 rounded-3xl p-6 flex items-center justify-between group hover:border-green-500 transition-all cursor-pointer">
                 <div className="flex items-center gap-4">
                   <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500">
                     <MapPin size={24} />
@@ -137,7 +137,7 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-[#161c2d] p-10 lg:p-16 rounded-[2.5rem] border border-green-800/20 shadow-2xl relative overflow-hidden"
+              className="bg-black p-10 lg:p-16 rounded-[2.5rem] border border-green-800/20 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5">
                 <MessageSquare size={200} />
@@ -175,7 +175,7 @@ export default function Contact() {
                           type="text"
                           name="name"
                           placeholder="John Doe"
-                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
 
@@ -188,7 +188,7 @@ export default function Contact() {
                           type="email"
                           name="email"
                           placeholder="john@enterprise.com"
-                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
                     </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                           type="text"
                           name="company"
                           placeholder="Acme Corp"
-                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         />
                       </div>
 
@@ -213,7 +213,7 @@ export default function Contact() {
                         </label>
                         <select
                           name="solution"
-                          className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
                         >
                           <option>CCTV & Surveillance</option>
                           <option>Visitor Management (VMS)</option>
@@ -232,7 +232,7 @@ export default function Contact() {
                         name="message"
                         rows={5}
                         placeholder="Tell us about your integration needs..."
-                        className="w-full bg-slate-900 border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none"
+                        className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none"
                       ></textarea>
                     </div>
 
@@ -273,3 +273,4 @@ export default function Contact() {
     </main>
   );
 }
+

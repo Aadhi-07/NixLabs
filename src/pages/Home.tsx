@@ -23,7 +23,7 @@ export default function Home() {
     <div className="relative">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-32 lg:pt-40 lg:pb-52">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.15)_0%,transparent_50%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.1)_0%,transparent_50%),linear-gradient(135deg,#0a0f1d_0%,#020617_100%)] -z-10"></div>
+        <div className="absolute inset-0 bg-black -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-12 -mt-16 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 bg-[#161c2d]/80 backdrop-blur-md p-10 rounded-3xl shadow-2xl border border-green-900/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 bg-black/80 backdrop-blur-md p-10 rounded-3xl shadow-2xl border border-green-900/20">
             {STATS.map((stat, i) => (
               <div key={i} className={`flex flex-col gap-2 items-center md:items-start md:px-8 ${i !== 0 ? 'md:border-l border-green-900/20' : ''}`}>
                 <span className="text-green-300 text-4xl font-black leading-none">
@@ -87,14 +87,14 @@ export default function Home() {
       </div>
 
       {/* Featured Solutions */}
-      <section className="py-32 bg-[#0a0f1d]">
+      <section className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-16">
             <div>
               <h2 className="text-4xl font-bold text-green-100 mb-4">What We Deliver</h2>
               <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-green-700 rounded-full"></div>
             </div>
-            <Link to="/products" className="text-green-500 font-bold text-sm hover:underline hidden md:block">View all solutions →</Link>
+            <Link to="/products" className="text-green-500 font-bold text-sm hover:underline hidden md:block">View all solutions {'->'}</Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -102,9 +102,9 @@ export default function Home() {
               <motion.div
                 key={solution.id}
                 whileHover={{ y: -10 }}
-                className="group bg-[#161c2d] rounded-3xl overflow-hidden border border-slate-800/80 transition-all hover:border-[#3b82f6]/50 hover:shadow-2xl"
+                className="group bg-black rounded-3xl overflow-hidden border border-slate-800/80 transition-all hover:border-[#3b82f6]/50 hover:shadow-2xl"
               >
-                <div className="aspect-video bg-slate-900 relative overflow-hidden">
+                <div className="aspect-video bg-black relative overflow-hidden">
                   <img
                     src={solution.image}
                     alt={solution.title}

@@ -56,7 +56,7 @@ export default function Products() {
             <h1 className="text-5xl font-bold tracking-tighter text-green-50 mb-4">Intelligent Systems & Infrastructure Solutions</h1>
             <p className="text-lg text-green-300 leading-relaxed">Cahaya Xcel provides robust technology products designed to enhance security, efficiency, and operational control across organizations.</p>
           </div>
-          <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1f2937] border border-green-500/10 rounded-xl text-sm font-bold text-green-100 hover:bg-green-900/40 transition-all">
+          <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-black border border-green-500/10 rounded-xl text-sm font-bold text-green-100 hover:bg-green-900/40 transition-all">
             <Download size={20} />
             Download API Specs
           </Link>
@@ -145,10 +145,10 @@ export default function Products() {
             <p className="text-sm text-green-500">Indexing <span className="font-bold text-green-100">{filteredProducts.length}</span> of {PRODUCTS.length} enterprise assets</p>
             <div className="flex items-center gap-6">
               <select className="bg-transparent border-none text-sm font-bold text-green-200 focus:ring-0 cursor-pointer hover:text-white">
-                <option className="bg-[#0a0f1a]">Sort: Highest Priority</option>
-                <option className="bg-[#0a0f1a]">Sort: New Releases</option>
-                <option className="bg-[#0a0f1a]">Sort: Price Ascending</option>
-                <option className="bg-[#0a0f1a]">Sort: Price Descending</option>
+                <option className="bg-black">Sort: Highest Priority</option>
+                <option className="bg-black">Sort: New Releases</option>
+                <option className="bg-black">Sort: Price Ascending</option>
+                <option className="bg-black">Sort: Price Descending</option>
               </select>
               <div className="flex items-center border border-green-500/10 rounded-xl overflow-hidden bg-white/5">
                 <button
@@ -177,15 +177,15 @@ export default function Products() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   whileHover={viewMode === 'grid' ? { y: -8 } : { x: 8 }}
-                  className={`group bg-[#161c2d] border border-green-900/20 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-green-500/50 ${viewMode === 'list' ? 'flex items-center p-4 gap-8' : ''
+                  className={`group bg-black border border-green-900/20 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-green-500/50 ${viewMode === 'list' ? 'flex items-center p-4 gap-8' : ''
                     }`}
                 >
-                  <div className={`relative bg-slate-900 overflow-hidden ${viewMode === 'list' ? 'h-32 w-48 shrink-0 rounded-xl' : 'h-56'}`}>
+                  <div className={`relative bg-black overflow-hidden ${viewMode === 'list' ? 'h-32 w-48 shrink-0 rounded-xl' : 'h-56'}`}>
                     <div
                       className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:scale-110 transition-transform duration-700"
                       style={{ backgroundImage: `url('${product.image}')` }}
                     ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1f2937] to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     {product.id === 'cctv-surveillance' && (
                       <div className="absolute top-4 left-4">
                         <span className="bg-[#135bec] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg">Featured Tech</span>
@@ -223,7 +223,7 @@ export default function Products() {
                           <div className="flex gap-3">
                             <button
                               onClick={handleRequestQuote}
-                              className="bg-slate-800 text-white p-3 rounded-xl hover:bg-green-600 transition-all border border-white/5"
+                              className="bg-black text-white p-3 rounded-xl hover:bg-green-600 transition-all border border-white/5"
                               title="Request Quote"
                             >
                               <MessageSquare size={20} />
@@ -242,7 +242,7 @@ export default function Products() {
                         <div className="flex gap-3 mt-auto">
                           <button
                             onClick={handleRequestQuote}
-                            className="flex-1 bg-slate-800 text-white py-3 rounded-xl font-bold text-sm hover:bg-green-600 transition-all border border-white/10"
+                            className="flex-1 bg-black text-white py-3 rounded-xl font-bold text-sm hover:bg-green-600 transition-all border border-white/10"
                           >
                             Quote
                           </button>
@@ -291,3 +291,5 @@ export default function Products() {
     </main>
   );
 }
+
+

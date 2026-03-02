@@ -4,7 +4,7 @@ import { Shield, Lock, Eye, FileText } from 'lucide-react';
 export default function PrivacyPolicy() {
     return (
         <div className="relative min-h-screen pt-32 pb-24 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1)_0%,transparent_40%)] -z-10"></div>
+            <div className="absolute inset-0 bg-black -z-10"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
                             <p className="text-slate-400 leading-relaxed">
                                 We implement enterprise-grade security measures including AES-256 encryption at rest, TLS 1.3 for data in transit, and continuous automated auditing. Our infrastructure is designed to maintain the highest standards of integrity and availability.
                             </p>
-                            <div className="mt-8 p-6 bg-[#161c2d] border border-slate-800 rounded-2xl flex items-start gap-4">
+                            <div className="mt-8 p-6 bg-black border border-slate-800 rounded-2xl flex items-start gap-4">
                                 <Lock className="text-[#3b82f6] shrink-0" size={24} />
                                 <p className="text-sm text-slate-300">
                                     <strong>Standard Compliance:</strong> Our platform adheres to global security standards (including ISO/IEC 27001) and is regularly audited for compliance with data protection regulations.

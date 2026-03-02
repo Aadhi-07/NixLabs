@@ -157,10 +157,10 @@ export default function Resources() {
                 placeholder="Search stories..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-slate-800/50 border border-green-800/20 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all w-64"
+                className="bg-black/50 border border-green-800/20 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all w-64"
               />
             </div>
-            <div className="flex bg-slate-800/50 p-1 rounded-xl border border-green-800/20">
+            <div className="flex bg-black/50 p-1 rounded-xl border border-green-800/20">
               {categories.map(cat => (
                 <button
                   key={cat}
@@ -187,7 +187,7 @@ export default function Resources() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ y: -10 }}
-                className="group bg-[#161c2d] rounded-3xl overflow-hidden border border-green-800/20 hover:border-green-500/50 transition-all"
+                className="group bg-black rounded-3xl overflow-hidden border border-green-800/20 hover:border-green-500/50 transition-all"
               >
                 <div className="aspect-video relative overflow-hidden">
                   <img
@@ -247,7 +247,7 @@ export default function Resources() {
 
       {/* Quick Links */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-[#161c2d] p-10 rounded-3xl border border-green-800/20 hover:bg-[#1c243a] transition-all group">
+        <div className="bg-black p-10 rounded-3xl border border-green-800/20 hover:bg-black transition-all group">
           <div className="size-16 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-8 group-hover:scale-110 transition-transform">
             <FileText size={32} />
           </div>
@@ -260,7 +260,7 @@ export default function Resources() {
             Browse Docs <ArrowRight size={20} />
           </button>
         </div>
-        <div className="bg-[#161c2d] p-10 rounded-3xl border border-green-800/20 hover:bg-[#1c243a] transition-all group">
+        <div className="bg-black p-10 rounded-3xl border border-green-800/20 hover:bg-black transition-all group">
           <div className="size-16 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-8 group-hover:scale-110 transition-transform">
             <MessageSquare size={32} />
           </div>
@@ -277,3 +277,5 @@ export default function Resources() {
     </main>
   );
 }
+
+

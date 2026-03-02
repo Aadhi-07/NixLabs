@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-[#0a0f1d] text-green-100 antialiased;
+    @apply bg-black text-green-100 antialiased;
   }
 }
 
@@ -25,3 +25,4 @@
 .markdown-body ul {
   @apply list-disc pl-6 mb-4;
 }
+

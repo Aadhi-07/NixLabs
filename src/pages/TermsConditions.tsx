@@ -4,7 +4,7 @@ import { Scale, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 export default function TermsConditions() {
     return (
         <div className="relative min-h-screen pt-32 pb-24 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.1)_0%,transparent_40%)] -z-10"></div>
+            <div className="absolute inset-0 bg-black -z-10"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -54,7 +54,7 @@ export default function TermsConditions() {
                             <p className="text-slate-400 leading-relaxed">
                                 While we strive for 99.9% uptime and maximum system reliability, we do not guarantee that the service will be entirely uninterrupted. We reserve the right to modify or discontinue service components for essential maintenance, platform upgrades, or security patches.
                             </p>
-                            <div className="mt-8 p-6 bg-[#161c2d] border border-slate-800 rounded-2xl flex items-start gap-4">
+                            <div className="mt-8 p-6 bg-black border border-slate-800 rounded-2xl flex items-start gap-4">
                                 <AlertCircle className="text-[#6366f1] shrink-0" size={24} />
                                 <p className="text-sm text-slate-300">
                                     <strong className="text-white">Enterprise Protocols:</strong> High-priority support and specific performance guarantees are governed by individual Service Level Agreements (SLA) between Cahaya Xcel and the respective organization.

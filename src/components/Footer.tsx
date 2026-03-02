@@ -3,7 +3,7 @@ import { Network, Globe, Mail, Share2, Rss, Shield, Lock } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#161c2d] border-t border-slate-800 pt-24 pb-12">
+    <footer className="bg-black border-t border-slate-800 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
           <div className="col-span-2">
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-green-500/60 text-sm font-medium">© 2024 Cahaya Xcel. Build smarter. Integrate better. Operate seamlessly.</p>
+          <p className="text-green-500/60 text-sm font-medium">(c) 2024 Cahaya Xcel. Build smarter. Integrate better. Operate seamlessly.</p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-green-400 text-sm font-medium">
               <Globe size={16} />
@@ -85,3 +85,4 @@ export default function Footer() {
     </footer>
   );
 }
+
