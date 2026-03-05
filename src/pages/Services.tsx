@@ -109,7 +109,7 @@ export default function Services() {
                 { step: '04', title: 'Deployment', icon: Rocket, desc: 'Seamless go-live transition with 24/7 monitoring and long-term maintenance support.' }
               ].map((item, i) => (
                 <div key={item.step} className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                  <div className={`size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl ${i === 0 ? 'bg-green-600 text-white shadow-green-500/30' : i === 1 ? 'bg-black border-2 border-green-600 text-green-500 shadow-green-500/10' : 'bg-black border-2 border-green-500/10 text-green-500/60'}`}>
+                  <div className="size-24 rounded-2xl flex items-center justify-center mb-6 shadow-xl bg-green-600 text-white shadow-green-500/30">
                     <item.icon size={40} />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-green-100">{item.step}. {item.title}</h3>

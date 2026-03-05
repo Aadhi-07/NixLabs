@@ -137,13 +137,13 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-slate-100 p-10 lg:p-16 rounded-[2.5rem] border border-slate-200 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-5 text-slate-900">
+              className="bg-zinc-900 p-10 lg:p-16 rounded-[2.5rem] border border-green-900/30 shadow-2xl shadow-green-500/5 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-5 text-green-500">
                 <MessageSquare size={200} />
               </div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold text-slate-900 mb-10">
+                <h2 className="text-3xl font-bold text-green-100 mb-10">
                   Project Inquiry
                 </h2>
 
@@ -151,13 +151,13 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-emerald-50 border border-emerald-200 p-8 rounded-2xl text-center"
+                    className="bg-green-500/10 border border-green-500/20 p-8 rounded-2xl text-center"
                   >
-                    <ShieldCheck className="text-emerald-500 size-16 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    <ShieldCheck className="text-green-400 size-16 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-green-100 mb-2">
                       Message Sent!
                     </h3>
-                    <p className="text-emerald-800">
+                    <p className="text-green-300">
                       Thank you for reaching out. Our team will contact you
                       within 24 hours.
                     </p>
@@ -174,7 +174,7 @@ export default function Contact() {
                           type="text"
                           name="name"
                           placeholder="John Doe"
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
+                          className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 placeholder:text-green-500/30 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                           type="email"
                           name="email"
                           placeholder="john@enterprise.com"
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
+                          className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 placeholder:text-green-500/30 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
                     </div>
@@ -202,7 +202,7 @@ export default function Contact() {
                           type="text"
                           name="company"
                           placeholder="Acme Corp"
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
+                          className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 placeholder:text-green-500/30 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
 
@@ -212,7 +212,7 @@ export default function Contact() {
                         </label>
                         <select
                           name="solution"
-                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
+                          className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         >
                           <option>General Inquiries</option>
                           <option>CCTV & Surveillance</option>
@@ -232,7 +232,7 @@ export default function Contact() {
                         name="message"
                         rows={5}
                         placeholder="Tell us about your integration needs..."
-                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none outline-none"
+                        className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 placeholder:text-green-500/30 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none outline-none"
                       ></textarea>
                     </div>
 

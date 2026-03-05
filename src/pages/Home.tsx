@@ -60,6 +60,7 @@ export default function Home() {
                   <span key={ind} className="text-green-300 text-sm font-medium">{ind}</span>
                 ))}
               </div>
+              <p className="mt-8 text-green-400/70 text-sm font-semibold italic">Build smarter. Integrate better. Operate seamlessly.</p>
             </div>
           </motion.div>
         </div>

@@ -7,7 +7,7 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-slate-100/90 backdrop-blur-xl border-b border-slate-200 shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-zinc-900/95 backdrop-blur-xl border-b border-green-900/20 shadow-lg shadow-black/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center group">
@@ -19,7 +19,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-semibold transition-colors ${location.pathname === item.href ? 'text-green-600' : 'text-slate-600 hover:text-green-600'}`}
+                className={`text-sm font-semibold transition-colors ${location.pathname === item.href ? 'text-green-400' : 'text-green-100/70 hover:text-green-400'}`}
               >
                 {item.label}
               </Link>
@@ -27,12 +27,12 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center bg-white rounded-lg px-3 py-1.5 border border-slate-200 focus-within:border-green-500/50 transition-all shadow-sm">
-              <Search className="text-slate-400 size-4" />
+            <div className="hidden md:flex items-center bg-white/5 rounded-lg px-3 py-1.5 border border-green-500/10 focus-within:border-green-500/50 transition-all">
+              <Search className="text-green-500/60 size-4" />
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-transparent border-none focus:ring-0 text-sm w-32 lg:w-48 placeholder:text-slate-400 text-slate-800 outline-none"
+                className="bg-transparent border-none focus:ring-0 text-sm w-32 lg:w-48 placeholder:text-green-500/40 text-green-100 outline-none"
               />
             </div>
             <Link to="/contact">

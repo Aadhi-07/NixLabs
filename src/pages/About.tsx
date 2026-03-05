@@ -20,35 +20,44 @@ export default function About() {
               About Us
             </motion.span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-10 leading-tight tracking-tight">
-              Pioneering the future of <span className="text-green-500">hardware-software integration</span> since 2015
+              Who We <span className="text-green-500">Are</span>
             </h1>
             <div className="space-y-6 mb-12">
-              <p className="text-xl md:text-2xl text-green-400 font-bold">
-                Our Mission
+              <p className="text-xl md:text-2xl text-green-300 leading-relaxed">
+                Cahaya Xcel is a forward-thinking IT solutions company specializing in software integration, intelligent platforms, and secure digital infrastructure. We design and implement scalable technology ecosystems that connect security systems, business applications, and operational workflows into a unified environment.
               </p>
               <p className="text-xl md:text-2xl text-green-300 leading-relaxed">
-                At TechIntegrate Solutions, we believe that the future lies at the intersection of hardware and software. Our mission is to bridge these two worlds, creating seamless integration solutions that empower businesses to innovate faster and operate smarter.
+                With deep expertise in surveillance systems, enterprise platforms, and integration architecture, we help organizations eliminate silos and achieve full visibility and control across their operations. Our solutions are built with state-of-the-art security standards, modern technologies, and future-ready architecture to support long-term growth.
+              </p>
+              <p className="text-xl md:text-2xl text-green-400 font-bold mt-4">
+                Mission
               </p>
               <p className="text-xl md:text-2xl text-green-300 leading-relaxed">
-                Founded by a team of engineers passionate about embedded systems and cloud technologies, we've grown from a small consultancy to a leading provider of integration solutions serving clients across manufacturing, healthcare, and smart infrastructure.
+                To continuously advance our team's expertise and technological capabilities, leveraging deep learning and innovation to deliver exceptional solutions and lasting value to our customers.
+              </p>
+              <p className="text-xl md:text-2xl text-green-400 font-bold mt-4">
+                Vision
+              </p>
+              <p className="text-xl md:text-2xl text-green-300 leading-relaxed">
+                To create intelligent platforms that seamlessly integrate access control, surveillance, and enterprise systems into a single unified solution for organizations worldwide.
               </p>
             </div>
             <div className="flex justify-center gap-12 pt-10 border-t border-green-900/20">
               <div className="text-center">
-                <div className="text-4xl font-black text-green-300 mb-2">2015</div>
-                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Founded</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-black text-green-300 mb-2">150+</div>
-                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Engineers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-black text-green-300 mb-2">12</div>
-                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Countries</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-black text-green-300 mb-2">500+</div>
                 <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-black text-green-300 mb-2">5+</div>
+                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Industries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-black text-green-300 mb-2">99.9%</div>
+                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">SLA Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-black text-green-300 mb-2">24/7</div>
+                <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Support</div>
               </div>
             </div>
           </div>
