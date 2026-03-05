@@ -78,12 +78,12 @@ export default function Contact() {
                     Call Support
                   </h4>
                   <p className="text-lg font-bold text-green-100">
-                    +1 (555) 123-4567
+                    +60 17-557 5794
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
+              {/* <div className="flex items-start gap-6">
                 <div className="size-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
                   <MapPin size={24} />
                 </div>
@@ -96,10 +96,10 @@ export default function Contact() {
                     San Francisco, CA 94105
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            <div className="mt-16 pt-16 border-t border-green-800/20">
+            {/* <div className="mt-16 pt-16 border-t border-green-800/20">
               <h4 className="text-sm font-black text-green-100 uppercase tracking-widest mb-8">
                 San Francisco Headquarters
               </h4>
@@ -129,7 +129,7 @@ export default function Contact() {
                 </div>
                 <ArrowRight className="text-green-500 group-hover:text-white group-hover:translate-x-2 transition-all" size={20} />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
@@ -137,14 +137,13 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-black p-10 lg:p-16 rounded-[2.5rem] border border-green-800/20 shadow-2xl relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-5">
+              className="bg-slate-100 p-10 lg:p-16 rounded-[2.5rem] border border-slate-200 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-5 text-slate-900">
                 <MessageSquare size={200} />
               </div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold text-green-100 mb-10">
+                <h2 className="text-3xl font-bold text-slate-900 mb-10">
                   Project Inquiry
                 </h2>
 
@@ -152,13 +151,13 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-emerald-500/20 border border-emerald-500/50 p-8 rounded-2xl text-center"
+                    className="bg-emerald-50 border border-emerald-200 p-8 rounded-2xl text-center"
                   >
                     <ShieldCheck className="text-emerald-500 size-16 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">
                       Message Sent!
                     </h3>
-                    <p className="text-emerald-100">
+                    <p className="text-emerald-800">
                       Thank you for reaching out. Our team will contact you
                       within 24 hours.
                     </p>
@@ -175,7 +174,7 @@ export default function Contact() {
                           type="text"
                           name="name"
                           placeholder="John Doe"
-                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
 
@@ -188,7 +187,7 @@ export default function Contact() {
                           type="email"
                           name="email"
                           placeholder="john@enterprise.com"
-                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
                     </div>
@@ -203,7 +202,7 @@ export default function Contact() {
                           type="text"
                           name="company"
                           placeholder="Acme Corp"
-                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         />
                       </div>
 
@@ -213,8 +212,9 @@ export default function Contact() {
                         </label>
                         <select
                           name="solution"
-                          className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         >
+                          <option>General Inquiries</option>
                           <option>CCTV & Surveillance</option>
                           <option>Visitor Management (VMS)</option>
                           <option>Payment Gateways</option>
@@ -232,7 +232,7 @@ export default function Contact() {
                         name="message"
                         rows={5}
                         placeholder="Tell us about your integration needs..."
-                        className="w-full bg-black border-green-800/20 rounded-xl px-4 py-4 text-white placeholder:text-slate-600 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none"
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all resize-none outline-none"
                       ></textarea>
                     </div>
 
