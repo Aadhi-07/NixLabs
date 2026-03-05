@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { STATS, FEATURED_SOLUTIONS, PRODUCTS } from '../constants';
-import AnimatedCounter from '../components/AnimatedCounter';
-import LogoCarousel from '../components/LogoCarousel';
+import { FEATURED_SOLUTIONS, PRODUCTS } from '../constants';
 import ProductModal from '../components/ProductModal';
 import { Product } from '../types';
 
@@ -65,27 +63,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="py-12 -mt-16 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 bg-black/80 backdrop-blur-md p-10 rounded-3xl shadow-2xl border border-green-900/20">
-            {STATS.map((stat, i) => (
-              <div key={i} className={`flex flex-col gap-2 items-center md:items-start md:px-8 ${i !== 0 ? 'md:border-l border-green-900/20' : ''}`}>
-                <span className="text-green-300 text-4xl font-black leading-none">
-                  <AnimatedCounter value={stat.value} />
-                </span>
-                <span className="text-green-500 text-xs font-bold uppercase tracking-[0.2em]">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Logo Carousel Section */}
-      <div className="relative z-10">
-        <LogoCarousel />
-      </div>
 
       {/* Featured Solutions */}
       <section className="py-32 bg-black">
