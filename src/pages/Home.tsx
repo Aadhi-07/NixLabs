@@ -5,6 +5,21 @@ import { FEATURED_SOLUTIONS, PRODUCTS } from '../constants';
 import ProductModal from '../components/ProductModal';
 import { Product } from '../types';
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
 export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,6 +79,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Featured Solutions */}
       <section className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,42 +91,56 @@ export default function Home() {
             <Link to="/products" className="text-green-500 font-bold text-sm hover:underline hidden md:block">View all solutions {'->'}</Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {FEATURED_SOLUTIONS.map((solution) => (
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[450px]"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {FEATURED_SOLUTIONS.map((solution, i) => (
               <motion.div
                 key={solution.id}
-                whileHover={{ y: -10 }}
-                className="group bg-black rounded-3xl overflow-hidden border border-slate-800/80 transition-all hover:border-[#3b82f6]/50 hover:shadow-2xl"
+                variants={fadeUp}
+                whileHover={{ scale: 0.98 }}
+                className={`group relative rounded-3xl overflow-hidden bg-zinc-900 border-t border-l border-white/10 shadow-2xl transition-all ${i === 0 ? 'md:col-span-2' : 'md:col-span-1'
+                  } ${i === 2 ? 'md:col-span-3 lg:col-span-1' : ''}`}
               >
-                <div className="aspect-video bg-black relative overflow-hidden">
-                  <img
-                    src={solution.image}
-                    alt={solution.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-5 left-5 bg-gradient-to-r from-green-500 to-green-700 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                    {solution.category}
+                {/* Shimmer Effect Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+                <div className="absolute inset-0 bg-black relative h-full flex flex-col justify-end">
+                  <div className="absolute inset-0 w-full h-full">
+                    <img
+                      src={solution.image}
+                      alt={solution.title}
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   </div>
-                </div>
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-green-100 group-hover:text-green-400 transition-colors">{solution.title}</h3>
-                    <span className="text-green-500 font-black text-xl">{solution.price}</span>
+
+                  <div className="relative p-8 z-10">
+                    <div className="inline-block bg-white/10 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-4 border border-white/10">
+                      {solution.category}
+                    </div>
+                    <div className="flex justify-between items-end mb-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-green-400 transition-colors leading-tight">{solution.title}</h3>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                      {solution.description}
+                    </p>
+                    <Link
+                      to="/products"
+                      className="inline-flex items-center gap-2 text-white font-bold text-sm uppercase tracking-widest hover:text-green-400 transition-colors"
+                    >
+                      Explore <span className="text-green-500 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </Link>
                   </div>
-                  <p className="text-green-300 text-base leading-relaxed mb-8">
-                    {solution.description}
-                  </p>
-                  <Link
-                    to="/products"
-                    className="block w-full py-4 px-4 bg-green-900/20 text-green-100 hover:bg-green-600 rounded-xl font-bold transition-all text-sm text-center uppercase tracking-widest border border-green-500/20"
-                  >
-                    {solution.cta}
-                  </Link>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

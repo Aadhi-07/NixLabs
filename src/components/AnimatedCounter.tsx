@@ -1,36 +1,50 @@
-import { useEffect, useState, useRef } from 'react';
-import { useInView, animate } from 'motion/react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useInView } from 'motion/react';
 
 interface AnimatedCounterProps {
-    value: string;
+    from?: number;
+    to: number;
+    suffix?: string;
+    duration?: number;
 }
 
-export default function AnimatedCounter({ value }: AnimatedCounterProps) {
-    const [displayValue, setDisplayValue] = useState('0');
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+export default function AnimatedCounter({ from = 0, to, suffix = '', duration = 1.5 }: AnimatedCounterProps) {
+    const [count, setCount] = useState(from);
+    const ref = useRef<HTMLSpanElement>(null);
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     useEffect(() => {
         if (!isInView) return;
 
-        // Parse the number and suffix
-        const numericPart = parseFloat(value.replace(/[^0-9.]/g, ''));
-        const suffix = value.replace(/[0-9.]/g, '');
+        let startTime: number;
+        let animationFrame: number;
 
-        const controls = animate(0, numericPart, {
-            duration: 2,
-            ease: [0.16, 1, 0.3, 1],
-            onUpdate: (latest) => {
-                // Handle decimals if they exist in the original value
-                const formatted = value.includes('.')
-                    ? latest.toFixed(1)
-                    : Math.floor(latest).toString();
-                setDisplayValue(formatted + suffix);
-            },
-        });
+        const animate = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
 
-        return () => controls.stop();
-    }, [value, isInView]);
+            // easeOutExpo
+            const easing = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            const currentCount = Math.floor(from + (to - from) * easing);
 
-    return <span ref={ref}>{displayValue}</span>;
+            setCount(currentCount);
+
+            if (progress < 1) {
+                animationFrame = requestAnimationFrame(animate);
+            } else {
+                setCount(to);
+            }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationFrame);
+    }, [from, to, duration, isInView]);
+
+    return (
+        <span ref={ref}>
+            {count}
+            {suffix}
+        </span>
+    );
 }

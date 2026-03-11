@@ -1,13 +1,24 @@
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Network, Search } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 import { motion } from 'motion/react';
+import MagneticButton from './MagneticButton';
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchTerm.trim()) {
+      navigate(`/products?search=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+    }
+  };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-zinc-900/95 backdrop-blur-xl border-b border-green-900/20 shadow-lg shadow-black/20">
+    <header className="sticky top-0 z-50 w-full bg-zinc-900/40 backdrop-blur-[12px] border-b border-white/5 shadow-lg shadow-black/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center group">
@@ -32,17 +43,18 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleSearch}
                 className="bg-transparent border-none focus:ring-0 text-sm w-32 lg:w-48 placeholder:text-green-500/40 text-green-100 outline-none"
               />
             </div>
             <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:brightness-110 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-green-500/20"
-              >
-                Get Started
-              </motion.button>
+              <MagneticButton>
+                <div className="bg-gradient-to-r from-green-500 to-green-600 hover:brightness-110 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-green-500/20">
+                  Get Started
+                </div>
+              </MagneticButton>
             </Link>
           </div>
         </div>

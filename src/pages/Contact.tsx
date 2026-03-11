@@ -214,11 +214,11 @@ export default function Contact() {
                           name="solution"
                           className="w-full bg-white/5 border border-green-500/10 rounded-xl px-4 py-4 text-green-100 focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all outline-none"
                         >
-                          <option>General Inquiries</option>
-                          <option>CCTV & Surveillance</option>
-                          <option>Visitor Management (VMS)</option>
-                          <option>Payment Gateways</option>
-                          <option>Platform Integration</option>
+                          <option className="bg-zinc-900 text-green-100">General Inquiries</option>
+                          <option className="bg-zinc-900 text-green-100">CCTV & Surveillance</option>
+                          <option className="bg-zinc-900 text-green-100">Visitor Management (VMS)</option>
+                          <option className="bg-zinc-900 text-green-100">Payment Gateways</option>
+                          <option className="bg-zinc-900 text-green-100">Platform Integration</option>
                         </select>
                       </div>
                     </div>

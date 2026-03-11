@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
 import { MemoryStick as Memory, Cpu, Network, Shield, Database, RefreshCcw, MessageSquare, Cloud, Terminal, Search, Grid, List, Download, X, ArrowRight } from 'lucide-react';
 import * as Icons from 'lucide-react';
@@ -9,8 +9,12 @@ import { Product } from '../types';
 
 export default function Products() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const initialSearch = searchParams.get('search') || '';
+  
   const [activeCategory, setActiveCategory] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,10 +60,6 @@ export default function Products() {
             <h1 className="text-5xl font-bold tracking-tighter text-green-50 mb-4">Intelligent Systems & Infrastructure Solutions</h1>
             <p className="text-lg text-green-300 leading-relaxed">Cahaya Xcel provides robust technology products designed to enhance security, efficiency, and operational control across organizations.</p>
           </div>
-          <Link to="/resources" className="inline-flex items-center gap-2 px-6 py-3 bg-black border border-green-500/10 rounded-xl text-sm font-bold text-green-100 hover:bg-green-900/40 transition-all">
-            <Download size={20} />
-            Download API Specs
-          </Link>
         </div>
       </div>
 

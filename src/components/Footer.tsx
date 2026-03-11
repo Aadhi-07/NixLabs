@@ -1,7 +1,30 @@
 import { Link } from 'react-router-dom';
-import { Network, Globe, Mail, Share2, Rss, Shield, Lock } from 'lucide-react';
+import { Network, Globe, Mail, Share2, Rss, Shield, Lock, Phone } from 'lucide-react';
 
 export default function Footer() {
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: 'Cahaya Xcel',
+          text: 'Intelligent Enterprise IT Solutions',
+          url: window.location.href,
+        });
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        alert('Link copied to clipboard!');
+      }
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  };
+
+  const contactActions = [
+    { icon: Phone, action: () => window.location.href = 'tel:+60175575794' },
+    { icon: Mail, action: () => window.location.href = 'mailto:cahayaxcel@gmail.com' },
+    { icon: Share2, action: handleShare }
+  ];
+
   return (
     <footer className="bg-black border-t border-slate-800 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,15 +37,18 @@ export default function Footer() {
               Delivering advanced IT solutions that unify security, operations, and digital platforms into a single intelligent ecosystem.
             </p>
             <div className="flex gap-5">
-              {[Globe, Mail, Share2].map((Icon, i) => (
-                <button
-                  key={i}
-                  onClick={() => alert('Social link clicked!')}
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-500/10 text-green-400 hover:text-white hover:bg-green-500 transition-all"
-                >
-                  <Icon size={20} />
-                </button>
-              ))}
+              {contactActions.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <button
+                    key={i}
+                    onClick={item.action}
+                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-500/10 text-green-400 hover:text-white hover:bg-green-500 transition-all"
+                  >
+                    <Icon size={20} />
+                  </button>
+                );
+              })}
             </div>
           </div>
 
