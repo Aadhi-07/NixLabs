@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-green-500/60 text-sm font-medium">(c) 2024 Cahaya Xcel. Build smarter. Integrate better. Operate seamlessly.</p>
+          <p className="text-green-500/60 text-sm font-medium">(c) 2026 Cahaya Xcel. Build smarter. Integrate better. Operate seamlessly.</p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-green-400 text-sm font-medium">
               <Globe size={16} />

@@ -42,7 +42,7 @@ export default function About() {
                 To create intelligent platforms that seamlessly integrate access control, surveillance, and enterprise systems into a single unified solution for organizations worldwide.
               </p>
             </div>
-            <div className="flex justify-center gap-12 pt-10 border-t border-green-900/20">
+            {/* <div className="flex justify-center gap-12 pt-10 border-t border-green-900/20">
               <div className="text-center">
                 <div className="text-4xl font-black text-green-300 mb-2">500+</div>
                 <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Projects</div>
@@ -59,7 +59,7 @@ export default function About() {
                 <div className="text-4xl font-black text-green-300 mb-2">24/7</div>
                 <div className="text-xs font-bold text-green-500 uppercase tracking-widest">Support</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
